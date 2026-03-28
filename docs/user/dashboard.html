@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sport AI — Влад</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --card: #161b22;
+    --border: #30363d;
+    --text: #e6edf3;
+    --text-muted: #8b949e;
+    --accent: #58a6ff;
+    --green: #3fb950;
+    --yellow: #d29922;
+    --red: #f85149;
+    --orange: #db6d28;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+    padding: 12px;
+    padding-bottom: 40px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  h1 { font-size: 1.4rem; text-align: center; padding: 16px 0 4px; }
+  .subtitle { text-align: center; color: var(--text-muted); font-size: 0.85rem; margin-bottom: 16px; }
+  .tabs { display: flex; gap: 6px; margin-bottom: 16px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .tab {
+    flex-shrink: 0;
+    padding: 8px 14px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .tab.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .panel { display: none; }
+  .panel.active { display: block; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+  .card-header {
+    padding: 12px 14px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  .card-header::after {
+    content: '▸';
+    transition: transform 0.2s;
+    color: var(--text-muted);
+  }
+  .card.open .card-header::after { transform: rotate(90deg); }
+  .card-body { display: none; padding: 0 14px 14px; }
+  .card.open .card-body { display: block; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.82rem; margin: 8px 0; }
+  th { text-align: left; color: var(--text-muted); font-weight: 500; padding: 6px 4px; border-bottom: 1px solid var(--border); }
+  td { padding: 6px 4px; border-bottom: 1px solid var(--border); }
+  tr:last-child td { border-bottom: none; }
+  .badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  .badge-green { background: rgba(63,185,80,0.15); color: var(--green); }
+  .badge-yellow { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .badge-blue { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .badge-red { background: rgba(248,81,73,0.15); color: var(--red); }
+  .badge-orange { background: rgba(219,109,40,0.15); color: var(--orange); }
+  .macro-row { display: flex; gap: 8px; margin: 10px 0; }
+  .macro-box {
+    flex: 1;
+    background: var(--bg);
+    border-radius: 8px;
+    padding: 10px 8px;
+    text-align: center;
+  }
+  .macro-box .val { font-size: 1.3rem; font-weight: 700; }
+  .macro-box .lbl { font-size: 0.7rem; color: var(--text-muted); }
+  .macro-box.kcal .val { color: var(--accent); }
+  .macro-box.prot .val { color: var(--red); }
+  .macro-box.fat .val { color: var(--yellow); }
+  .macro-box.carb .val { color: var(--green); }
+  .timeline { padding: 0; list-style: none; }
+  .timeline li {
+    position: relative;
+    padding: 0 0 16px 20px;
+    border-left: 2px solid var(--border);
+  }
+  .timeline li:last-child { border-left-color: transparent; padding-bottom: 0; }
+  .timeline li::before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: 4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--border);
+  }
+  .timeline li.done::before { background: var(--green); }
+  .timeline li.current::before { background: var(--accent); box-shadow: 0 0 6px var(--accent); }
+  .timeline li.future::before { background: var(--border); }
+  .timeline .t-label { font-weight: 600; font-size: 0.9rem; }
+  .timeline .t-sub { font-size: 0.8rem; color: var(--text-muted); }
+  .exercise-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    margin-right: 4px;
+    flex-shrink: 0;
+  }
+  .ex-row { display: flex; align-items: flex-start; gap: 6px; padding: 8px 0; border-bottom: 1px solid var(--border); }
+  .ex-row:last-child { border-bottom: none; }
+  .ex-info { flex: 1; }
+  .ex-name { font-weight: 600; font-size: 0.85rem; }
+  .ex-detail { font-size: 0.78rem; color: var(--text-muted); }
+  .ex-weight { font-size: 0.85rem; font-weight: 600; color: var(--accent); white-space: nowrap; }
+  .note {
+    background: rgba(88,166,255,0.08);
+    border-left: 3px solid var(--accent);
+    padding: 8px 10px;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.82rem;
+    margin: 8px 0;
+  }
+  .note.warn {
+    background: rgba(210,153,34,0.08);
+    border-left-color: var(--yellow);
+  }
+  .progress-bar {
+    height: 6px;
+    background: var(--border);
+    border-radius: 3px;
+    margin: 6px 0;
+    overflow: hidden;
+  }
+  .progress-bar .fill { height: 100%; border-radius: 3px; background: var(--accent); }
+  .section-title { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin: 14px 0 6px; }
+  .updated { text-align: center; color: var(--text-muted); font-size: 0.75rem; padding: 16px 0 8px; }
+</style>
+</head>
+<body>
+
+<h1>Sport AI</h1>
+<p class="subtitle">Влад &middot; 81.1 кг &middot; Рекомпозиция → Набор</p>
+
+<div class="tabs">
+  <div class="tab active" onclick="showTab('plan')">План</div>
+  <div class="tab" onclick="showTab('day1')">Пн</div>
+  <div class="tab" onclick="showTab('day2')">Вт</div>
+  <div class="tab" onclick="showTab('day3')">Чт</div>
+  <div class="tab" onclick="showTab('day4')">Пт</div>
+  <div class="tab" onclick="showTab('food')">Питание</div>
+</div>
+
+<!-- ========== ПЛАН ========== -->
+<div id="plan" class="panel active">
+
+  <div class="card open">
+    <div class="card-header" onclick="toggle(this)">Мезоцикл 1</div>
+    <div class="card-body">
+      <ul class="timeline">
+        <li class="done">
+          <div class="t-label">Неделя 1 <span class="badge badge-green">done</span></div>
+          <div class="t-sub">16-20 мар &middot; RPE 8-9 &middot; 2600 ккал</div>
+        </li>
+        <li class="done">
+          <div class="t-label">Неделя 2 <span class="badge badge-green">done</span></div>
+          <div class="t-sub">23-27 мар &middot; RPE 8-9 &middot; 2600 ккал</div>
+        </li>
+        <li class="current">
+          <div class="t-label">Неделя 3 <span class="badge badge-blue">сейчас</span></div>
+          <div class="t-sub">30 мар - 3 апр &middot; RPE 9-10 &middot; 2800 ккал</div>
+        </li>
+        <li class="future">
+          <div class="t-label">Неделя 4</div>
+          <div class="t-sub">6-10 апр &middot; RPE 9-10 &middot; Пик &middot; 2800 ккал</div>
+        </li>
+        <li class="future">
+          <div class="t-label">Неделя 5</div>
+          <div class="t-sub">13-17 апр &middot; RPE 8-9 &middot; Финальная &middot; 2800 ккал</div>
+        </li>
+        <li class="future">
+          <div class="t-label">Отпуск = Деload <span class="badge badge-orange">отдых</span></div>
+          <div class="t-sub">18 апр - 1 мая &middot; Full-body 2-3 р/нед</div>
+        </li>
+        <li class="future">
+          <div class="t-label">Мезоцикл 2</div>
+          <div class="t-sub">~5 мая &middot; Новый цикл</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" onclick="toggle(this)">Цели на неделю 3</div>
+    <div class="card-body">
+      <p class="section-title">Повысить вес</p>
+      <table>
+        <tr><td>Жим наклонный Смит</td><td>47.5 → <b>50 кг</b></td></tr>
+        <tr><td>Подъём на носки</td><td>80 → <b>85 кг</b></td></tr>
+        <tr><td>Молоток</td><td>14 → <b>16 кг</b></td></tr>
+      </table>
+      <p class="section-title">Закрепить</p>
+      <table>
+        <tr><td>Сгибание ног</td><td>40 кг → 4×15</td></tr>
+        <tr><td>Разгибание ног</td><td>60 кг → 4×12</td></tr>
+        <tr><td>Жим гантелей сидя</td><td>20 кг → 3×10</td></tr>
+        <tr><td>Бабочка (Пн)</td><td>35 кг → 3×12</td></tr>
+      </table>
+      <div class="note warn">Обратная бабочка (Чт) — все 3×15! Тяга НБ в сторону (Пт) — вернуть!</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" onclick="toggle(this)">Динамика веса</div>
+    <div class="card-body">
+      <table>
+        <th>Период</th><th>Средний</th><th>Дельта</th>
+        <tr><td>Базовая (15.03)</td><td>80.0 кг</td><td>—</td></tr>
+        <tr><td>Неделя 1</td><td>80.5 кг</td><td>+0.5</td></tr>
+        <tr><td>Неделя 2</td><td>81.1 кг</td><td>+0.6</td></tr>
+      </table>
+      <p class="section-title">Цель: 85 кг</p>
+      <div class="progress-bar"><div class="fill" style="width:22%"></div></div>
+      <div style="display:flex;justify-content:space-between;font-size:0.75rem;color:var(--text-muted)">
+        <span>80.0</span><span>81.1 / 85.0 кг</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" onclick="toggle(this)">Отпуск (18 апр — 1 мая)</div>
+    <div class="card-body">
+      <div class="note">Full-body 2-3 раза в неделю, 30-40 мин, RPE 6-7. Белок в каждый приём пищи.</div>
+      <p class="section-title">Тренировка A (верх)</p>
+      <table>
+        <tr><td>Жим (любой)</td><td>3×10</td></tr>
+        <tr><td>Тяга (любая)</td><td>3×10</td></tr>
+        <tr><td>Жим сидя</td><td>2×12</td></tr>
+        <tr><td>Бицепс</td><td>2×12</td></tr>
+        <tr><td>Трицепс</td><td>2×12</td></tr>
+      </table>
+      <p class="section-title">Тренировка B (низ)</p>
+      <table>
+        <tr><td>Выпады / жим ногами</td><td>3×12</td></tr>
+        <tr><td>Сгибание ног</td><td>3×12</td></tr>
+        <tr><td>Жим (любой)</td><td>2×10</td></tr>
+        <tr><td>Тяга (любая)</td><td>2×10</td></tr>
+        <tr><td>Подъём на носки</td><td>3×15</td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ========== ДЕНЬ 1 ========== -->
+<div id="day1" class="panel">
+  <div class="card open">
+    <div class="card-header" onclick="toggle(this)">Понедельник: Грудь + Дельта + Трицепс</div>
+    <div class="card-body">
+      <div style="font-size:0.8rem;color:var(--text-muted);margin-bottom:8px">~70-80 мин &middot; 20 сетов &middot; RPE 9-10</div>
+
+      <p class="section-title">Грудь</p>
+      <div class="ex-row">
+        <span class="exercise-num">1</span>
+        <div class="ex-info">
+          <div class="ex-name">Сведение рук (бабочка)</div>
+          <div class="ex-detail">3×12 &middot; Отдых 90 сек &middot; Преактивация</div>
+        </div>
+        <div class="ex-weight">35 кг</div>
+      </div>
+      <div class="ex-row">
+        <span class="exercise-num">2</span>
+        <div class="ex-info">
+          <div class="ex-name">Жим наклонный в Смите 30°</div>
+          <div class="ex-detail">3×10 &middot; Отдых 2 мин &middot; До отказа</div>
+        </div>
+        <div class="ex-weight">50 кг ↑</div>
+      </div>
+      <div class="ex-row">
+        <span class="exercise-num">3</span>
+        <div class="ex-info">
+          <div class="ex-name">Жим гантелей лёжа (гориз.)</div>
+          <div class="ex-detail">2×12 &middot; Отдых 2 мин &middot; Растяжка внизу</div>
+        </div>
+        <div class="ex-weight">24 кг</div>
+      </div>
+
+      <p class="section-title">Передняя дельта</p>
+      <div class="ex-row">
+        <span class="exercise-num">4</span>
+        <div class="ex-info">
+          <div class="ex-name">Жим гантелей сидя</div>
+          <div class="ex-detail">3×10 &middot; Отдых 90 сек</div>
+        </div>
+        <div class="ex-weight">20 кг</div>
+      </div>
+
+      <p class="section-title">Трицепс</p>
+      <div class="ex-row">
+        <span class="exercise-num">5</span>
+        <div class="ex-info">
+          <div class="ex-name">Разгибание на блоке (канат, наклон)</div>
+          <div class="ex-detail">3×12 &middot; Отдых 90 сек &middot; Длинная головка</div>
+        </div>
+        <div class="ex-weight">20 кг</div>
+      </div>
+      <div class="ex-row">
+        <span class="exercise-num">6</span>
+        <div class="ex-info">
+          <div class="ex-name">Разгибание на блоке (прямая)</div>
+          <div class="ex-detail">3×12 &middot; Отдых 90 сек &middot; Латеральная головка</div>
+        </div>
+        <div class="ex-weight">20 кг</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== ДЕНЬ 2 ========== -->
+<div id="day2" class="panel">
+  <div class="card open">
+    <div class="card-header" onclick="toggle(this)">Вторник: Ноги + Бицепс</div>
+    <div class="card-body">
+      <div style="font-size:0.8rem;color:var(--text-muted);margin-bottom:8px">~70-80 мин &middot; 23 сета &middot; RPE 9-10</div>
+
+      <p class="section-title">Ноги — часть 1</p>
+      <div class="ex-row">
+        <span class="exercise-num">1</span>
+        <div class="ex-info">
+          <div class="ex-name">Сгибание ног лёжа</div>
+          <div class="ex-detail">4×15 &middot; Отдых 90 сек &middot; Бицепс бедра</div>
+        </div>
+        <div class="ex-weight">40 кг</div>
+      </div>
+      <div class="ex-row">
+        <span class="exercise-num">2</span>
+        <div class="ex-info">
+          <div class="ex-name">Разгибание ног в тренажёре</div>
+          <div class="ex-detail">4×12 &middot; Отдых 90 сек &middot; Квадрицепс</div>
+        </div>
+        <div class="ex-weight">60 кг</div>
+      </div>
+
+      <p class="section-title">Бицепс</p>
+      <div class="ex-row">
+        <span class="exercise-num">3</span>
+        <div class="ex-info">
+          <div class="ex-name">Сгибание рук с EZ-штангой стоя</div>
+          <div class="ex-detail">3×10 &middot; Отдых 90 сек &middot; Базовое</div>
+        </div>
+        <div class="ex-weight">20 кг</div>
+      </div>
+      <div class="ex-row">
+        <span class="exercise-num">4</span>
+        <div class="ex-info">
+          <div class="ex-name">Сгибание рук на наклонной 45°</div>
+          <div class="ex-detail">3×12 &middot; Отдых 90 сек &middot; Длинная головка</div>
+        </div>
+        <div class="ex-weight">12 кг</div>
+      </div>
+      <div class="ex-row">
+        <span class="exercise-num">5</span>
+        <div class="ex-info">
+          <div class="ex-name">Сгибание рук на нижнем блоке</div>
+          <div class="ex-detail">2×15 &middot; Отдых 60 сек &middot; Пампинг</div>
+        </div>
+        <div class="ex-weight">17.5 кг</div>
+      </div>
+
+      <p class="section-title">Ноги — часть 2</p>
+      <div class="ex-row">
+        <span class="exercise-num">6</span>
+        <div class="ex-info">
+          <div class="ex-name">Подъём на носки сидя</div>
+          <div class="ex-detail">4×15 &middot; Отдых 90 сек &middot; Пауза вверху</div>
+        </div>
+        <div class="ex-weight">85 кг ↑</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== ДЕНЬ 3 ========== -->
+<div id="day3" class="panel">
+  <div class="card open">
+    <div class="card-header" onclick="toggle(this)">Четверг: Спина + Зад. дельта + Бицепс</div>
+    <div class="card-body">
+      <div style="font-size:0.8rem;color:var(--text-muted);margin-bottom:8px">~70-80 мин &middot; 19 сетов &middot; RPE 9-10</div>
+
+      <p class="section-title">Спина</p>
+      <div class="ex-row">
+        <span class="exercise-num">1</span>
+        <div class="ex-info">
+          <div class="ex-name">Подтягивания (гравитрон)</div>
+          <div class="ex-detail">3×12 &middot; Отдых 2 мин &middot; Широкий хват</div>
+        </div>
+        <div class="ex-weight">-21 кг</div>
+      </div>
+      <div class="ex-row">
+        <span class="exercise-num">2</span>
+        <div class="ex-info">
+          <div class="ex-name">Тяга верхнего блока обр. хватом</div>
+          <div class="ex-detail">3×12 &middot; Отдых 2 мин</div>
+        </div>
+        <div class="ex-weight">65 кг</div>
+      </div>
+      <div class="ex-row">
+        <span class="exercise-num">3</span>
+        <div class="ex-info">
+          <div class="ex-name">Тяга нижнего блока одной рукой</div>
+          <div class="ex-detail">3×12 &middot; Отдых 90 сек &middot; Лопатки</div>
+        </div>
+        <div class="ex-weight">60 кг</div>
+      </div>
+      <div class="ex-row">
+        <span class="exercise-num">4</span>
+        <div class="ex-info">
+          <div class="ex-name">Тяга в Хаммере одной рукой</div>
+          <div class="ex-detail">3×10 &middot; Отдых 90 сек &middot; Толщина</div>
+        </div>
+        <div class="ex-weight">40 кг</div>
+      </div>
+
+      <p class="section-title">Задняя дельта</p>
+      <div class="ex-row">
+        <span class="exercise-num">5</span>
+        <div class="ex-info">
+          <div class="ex-name">Обратная бабочка</div>
+          <div class="ex-detail">3×15 &middot; Отдых 60 сек</div>
+        </div>
+        <div class="ex-weight">22.5 кг</div>
+      </div>
+      <div class="note warn">Все 3 подхода! Не пропускать.</div>
+
+      <p class="section-title">Бицепс</p>
+      <div class="ex-row">
+        <span class="exercise-num">6</span>
+        <div class="ex-info">
+          <div class="ex-name">Сгибание рук «молот»</div>
+          <div class="ex-detail">2×12 &middot; Отдых 90 сек &middot; Брахиалис</div>
+        </div>
+        <div class="ex-weight">16 кг ↑</div>
+      </div>
+      <div class="ex-row">
+        <span class="exercise-num">7</span>
+        <div class="ex-info">
+          <div class="ex-name">Сгибание рук на наклонной 45°</div>
+          <div class="ex-detail">2×12 &middot; Отдых 90 сек &middot; Растяжка</div>
+        </div>
+        <div class="ex-weight">12 кг</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== ДЕНЬ 4 ========== -->
+<div id="day4" class="panel">
+  <div class="card open">
+    <div class="card-header" onclick="toggle(this)">Пятница: Плечи + Грудь + Трицепс</div>
+    <div class="card-body">
+      <div style="font-size:0.8rem;color:var(--text-muted);margin-bottom:8px">~55-65 мин &middot; 16 сетов &middot; RPE 9-10</div>
+
+      <p class="section-title">Плечи</p>
+      <div class="ex-row">
+        <span class="exercise-num">1</span>
+        <div class="ex-info">
+          <div class="ex-name">Жим гантелей сидя</div>
+          <div class="ex-detail">3×10 &middot; Отдых 90 сек</div>
+        </div>
+        <div class="ex-weight">20 кг</div>
+      </div>
+      <div class="ex-row">
+        <span class="exercise-num">2</span>
+        <div class="ex-info">
+          <div class="ex-name">Подъём через стороны сидя</div>
+          <div class="ex-detail">3×15 &middot; Отдых 60 сек &middot; Средняя дельта</div>
+        </div>
+        <div class="ex-weight">10 кг</div>
+      </div>
+
+      <p class="section-title">Задняя дельта</p>
+      <div class="ex-row">
+        <span class="exercise-num">3</span>
+        <div class="ex-info">
+          <div class="ex-name">Тяга нижнего блока в сторону</div>
+          <div class="ex-detail">3×15 &middot; Отдых 60 сек &middot; Поочерёдно</div>
+        </div>
+        <div class="ex-weight">7.5 кг</div>
+      </div>
+      <div class="note warn">Не пропускать! Важно для задней дельты.</div>
+
+      <p class="section-title">Грудь — добивка</p>
+      <div class="ex-row">
+        <span class="exercise-num">4</span>
+        <div class="ex-info">
+          <div class="ex-name">Сведение рук (бабочка)</div>
+          <div class="ex-detail">3×15 &middot; Отдых 60 сек &middot; Пампинг</div>
+        </div>
+        <div class="ex-weight">30 кг</div>
+      </div>
+
+      <p class="section-title">Трицепс</p>
+      <div class="ex-row">
+        <span class="exercise-num">5</span>
+        <div class="ex-info">
+          <div class="ex-name">Разгибание на блоке (канат)</div>
+          <div class="ex-detail">4×15 &middot; Отдых 60 сек</div>
+        </div>
+        <div class="ex-weight">22.5 кг</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== ПИТАНИЕ ========== -->
+<div id="food" class="panel">
+  <div class="macro-row">
+    <div class="macro-box kcal"><div class="val">2800</div><div class="lbl">ккал</div></div>
+    <div class="macro-box prot"><div class="val">170</div><div class="lbl">белок, г</div></div>
+    <div class="macro-box fat"><div class="val">75</div><div class="lbl">жиры, г</div></div>
+    <div class="macro-box carb"><div class="val">355</div><div class="lbl">углев, г</div></div>
+  </div>
+
+  <div class="card open">
+    <div class="card-header" onclick="toggle(this)">Завтрак &middot; 8-9:00 &middot; ~550 ккал</div>
+    <div class="card-body">
+      <table>
+        <tr><td>Творог 5%</td><td>250 г</td></tr>
+        <tr><td>Овсянка (сухая)</td><td>50 г</td></tr>
+        <tr><td>Банан</td><td>1 шт</td></tr>
+        <tr><td>Мёд (опц.)</td><td>10 г</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" onclick="toggle(this)">Обед &middot; 13-14:00 &middot; ~750 ккал</div>
+    <div class="card-body">
+      <table>
+        <tr><td>Куриная грудка</td><td>200 г</td></tr>
+        <tr><td>Рис (сухой)</td><td>110 г</td></tr>
+        <tr><td>Оливковое масло</td><td>15 мл</td></tr>
+        <tr><td>Овощи</td><td>150 г</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" onclick="toggle(this)">Перекус &middot; 16-17:00 &middot; ~450 ккал</div>
+    <div class="card-body">
+      <table>
+        <tr><td>Рис (сухой)</td><td>70 г</td></tr>
+        <tr><td>Куриная грудка</td><td>80 г</td></tr>
+        <tr><td>Банан</td><td>1 шт</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" onclick="toggle(this)">Интра-тренировка &middot; ~100 ккал</div>
+    <div class="card-body">
+      <table>
+        <tr><td>Кола без газа / сок</td><td>250 мл</td></tr>
+      </table>
+      <div class="note">Пить маленькими глотками между подходами</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" onclick="toggle(this)">Ужин &middot; 20-21:00 &middot; ~950 ккал</div>
+    <div class="card-body">
+      <table>
+        <tr><td>Куриная грудка</td><td>250 г</td></tr>
+        <tr><td>Рис (сухой)</td><td>120 г</td></tr>
+        <tr><td>Оливковое масло</td><td>10 мл</td></tr>
+        <tr><td>Орехи</td><td>30 г</td></tr>
+        <tr><td>Овощи</td><td>150 г</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" onclick="toggle(this)">Дни отдыха</div>
+    <div class="card-body">
+      <div class="note">2400-2500 ккал. Убрать перекус или уменьшить рис на ужин.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" onclick="toggle(this)">Добавки</div>
+    <div class="card-body">
+      <table>
+        <tr><td>Omega-3</td><td>500 EPA + 250 DHA</td><td>Завтрак</td></tr>
+        <tr><td>B-Complex</td><td>1 шт</td><td>Завтрак</td></tr>
+        <tr><td>Витамин D3</td><td>4000 МЕ</td><td>Завтрак</td></tr>
+        <tr><td>Витамин K2</td><td>100 мкг</td><td>Завтрак</td></tr>
+        <tr><td>Магний</td><td>320 мг (4 капс.)</td><td>Перед сном</td></tr>
+        <tr><td>Цинк</td><td>25 мг</td><td>Обед/Ужин</td></tr>
+        <tr><td>Креатин</td><td>5 г</td><td>После трени</td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<p class="updated">Обновлено: 28 марта 2026</p>
+
+<script>
+function showTab(id) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  event.target.classList.add('active');
+}
+function toggle(el) {
+  el.parentElement.classList.toggle('open');
+}
+</script>
+</body>
+</html>

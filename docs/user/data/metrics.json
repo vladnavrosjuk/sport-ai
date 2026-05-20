@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-05-20",
+  "sources": [
+    "docs/user/measurements_log.md",
+    "docs/user/recovery_log.md",
+    "docs/user/weight_log.md"
+  ],
+  "leanBulkTargets": {
+    "weightGainKgPerWeek": [0.25, 0.5],
+    "weightGainPercentPerWeek": [0.3, 0.6],
+    "stepsPerDay": 10000,
+    "sleepHours": [7, 8],
+    "waistCheckFrequency": "weekly",
+    "photoCheckFrequencyWeeks": [2, 4]
+  },
+  "current": {
+    "week": "2026-W20",
+    "averageWeightKg": 81.02,
+    "weeklyWeightChangeKg": -0.04,
+    "weeklyWeightChangePercent": -0.05,
+    "waistCm": null,
+    "sleepHours": [7, 8],
+    "stress": "medium",
+    "stepsPerDay": 10000
+  },
+  "decisionRules": [
+    {
+      "condition": "weight_stable_10_14_days_and_waist_stable",
+      "recommendation": "Propose +150-200 kcal from carbohydrates."
+    },
+    {
+      "condition": "weight_gain_above_0_5kg_per_week_for_2_weeks_or_waist_rises_fast",
+      "recommendation": "Hold calories or propose -100-150 kcal from carbohydrates."
+    },
+    {
+      "condition": "strength_down_2_sessions_or_joint_pain",
+      "recommendation": "Check sleep, stress, exercise selection, and consider deload or volume reduction."
+    }
+  ]
+}

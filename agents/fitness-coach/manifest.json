@@ -1,0 +1,145 @@
+{
+  "id": "fitness-coach",
+  "name": "Fitness Coach Agent",
+  "description": "Project agent for strength training, nutrition, progress tracking, weekly planning, and dashboard synchronization in Sport AI Workplace.",
+  "version": "1.0.0",
+  "language": "ru",
+  "role": [
+    "personal-trainer",
+    "nutrition-coach",
+    "progress-analyst"
+  ],
+  "skill": ".cursor/skills/fitness-coach/SKILL.md",
+  "instructions": [
+    "AGENTS.md",
+    ".cursor/rules/development.mdc",
+    ".cursor/rules/workflow.mdc",
+    ".cursor/rules/self_improve.mdc",
+    ".cursor/rules/report_weekly_plan.mdc"
+  ],
+  "ruleGroups": {
+    "initialization": ".cursor/rules/initialization/*.mdc",
+    "training": ".cursor/rules/training/*.mdc",
+    "nutrition": ".cursor/rules/nutrition/*.mdc"
+  },
+  "commands": {
+    "implemented": [
+      {
+        "name": "/fitness-init",
+        "file": ".cursor/commands/fitness-init.md",
+        "purpose": "Initialize or refresh the user profile."
+      },
+      {
+        "name": "/generate-workout",
+        "file": ".cursor/commands/generate-workout.md",
+        "purpose": "Generate the current training program."
+      },
+      {
+        "name": "/generate-nutrition",
+        "file": ".cursor/commands/generate-nutrition.md",
+        "purpose": "Generate the nutrition plan."
+      },
+      {
+        "name": "/log-workout",
+        "file": ".cursor/commands/log-workout.md",
+        "purpose": "Record workout results and evaluate progression."
+      },
+      {
+        "name": "/log-weight",
+        "file": ".cursor/commands/log-weight.md",
+        "purpose": "Record body weight and evaluate trend."
+      },
+      {
+        "name": "/show-progress",
+        "file": ".cursor/commands/show-progress.md",
+        "purpose": "Summarize progress across training, body weight, and nutrition."
+      },
+      {
+        "name": "/next-cycle",
+        "file": ".cursor/commands/next-cycle.md",
+        "purpose": "Transition to the next mesocycle."
+      },
+      {
+        "name": "/deload",
+        "file": ".cursor/commands/deload.md",
+        "purpose": "Plan a deload week."
+      },
+      {
+        "name": "/quick-profile",
+        "file": ".cursor/commands/quick-profile.md",
+        "purpose": "Create a minimal user profile."
+      },
+      {
+        "name": "/generate-full",
+        "file": ".cursor/commands/generate-full.md",
+        "purpose": "Generate training and nutrition together."
+      },
+      {
+        "name": "/weekly-review",
+        "file": ".cursor/commands/weekly-review.md",
+        "purpose": "Create a weekly progress review and next-week plan."
+      },
+      {
+        "name": "/monthly-review",
+        "file": ".cursor/commands/monthly-review.md",
+        "purpose": "Create a monthly progress review and next-block recommendations."
+      },
+      {
+        "name": "/update-1rm",
+        "file": ".cursor/commands/update-1rm.md",
+        "purpose": "Update confirmed strength records and calculated 1RM values."
+      },
+      {
+        "name": "/adjust-calories",
+        "file": ".cursor/commands/adjust-calories.md",
+        "purpose": "Propose calorie and macro adjustments from weight trend and adherence."
+      },
+      {
+        "name": "/health-check",
+        "file": ".cursor/commands/health-check.md",
+        "purpose": "Check project consistency across data, commands, dashboard, and agent manifest."
+      }
+    ],
+    "declaredOnly": []
+  },
+  "dataSources": {
+    "profile": ".cursor/project/user_profile.md",
+    "currentProgram": "docs/user/current_program.md",
+    "nutritionPlan": "docs/user/nutrition_plan.md",
+    "workoutLog": "docs/user/workout_log.md",
+    "weightLog": "docs/user/weight_log.md",
+    "strengthRecords": "docs/user/strength_records.md",
+    "measurementsLog": "docs/user/measurements_log.md",
+    "recoveryLog": "docs/user/recovery_log.md",
+    "dashboard": "docs/user/dashboard.html",
+    "structuredData": "docs/user/data/*.json",
+    "weeklyReviews": "docs/user/weekly_reviews/",
+    "monthlyReviews": "docs/user/monthly_reviews/"
+  },
+  "permissionGates": [
+    "workingWeights",
+    "calories",
+    "macros",
+    "trainingStructure",
+    "exerciseSelection",
+    "goals",
+    "trainingDays",
+    "injuriesOrLimitations"
+  ],
+  "workflows": [
+    "read-profile-first",
+    "ask-for-missing-data",
+    "validate-user-input",
+    "propose-adjustments-before-changing",
+    "sync-dashboard-after-data-change",
+    "sync-structured-data-after-data-change",
+    "include-next-week-plan-after-reports",
+    "run-health-check-before-major-generation"
+  ],
+  "dashboardSync": {
+    "required": true,
+    "file": "docs/user/dashboard.html",
+    "updateMarker": "Обновлено",
+    "remindGitPush": true
+  }
+}

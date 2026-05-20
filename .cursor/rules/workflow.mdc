@@ -43,13 +43,14 @@ alwaysApply: true
 | `/show-progress` | Показать прогресс | [show-progress.md](mdc:../commands/show-progress.md) |
 | `/update-1rm` | Обновить максимумы | [update-1rm.md](mdc:../commands/update-1rm.md) |
 | `/weekly-review` | Еженедельный обзор | [weekly-review.md](mdc:../commands/weekly-review.md) |
+| `/monthly-review` | Ежемесячный обзор | [monthly-review.md](mdc:../commands/monthly-review.md) |
 
 ### Комбинированные
 
-| Команда | Описание |
-|---------|----------|
-| `/generate-full` | Полная программа: тренировки + питание |
-| `/monthly-review` | Ежемесячный обзор с корректировками |
+| Команда | Описание | Детали |
+|---------|----------|--------|
+| `/generate-full` | Полная программа: тренировки + питание | [generate-full.md](mdc:../commands/generate-full.md) |
+| `/health-check` | Проверка консистентности проекта | [health-check.md](mdc:../commands/health-check.md) |
 
 ---
 
@@ -176,6 +177,11 @@ alwaysApply: true
 | План питания | `docs/user/nutrition_plan.md` |
 | История тренировок | `docs/user/workout_log.md` |
 | История веса | `docs/user/weight_log.md` |
+| Силовые ориентиры | `docs/user/strength_records.md` |
+| Структурированные данные | `docs/user/data/*.json` |
+| Еженедельные обзоры | `docs/user/weekly_reviews/` |
+| Ежемесячные обзоры | `docs/user/monthly_reviews/` |
+| Мобильный дашборд | `docs/user/dashboard.html` |
 
 ---
 

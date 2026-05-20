@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-05-17",
+  "source": "docs/user/nutrition_plan.md",
+  "phase": "Lean bulk после отпуска",
+  "targets": {
+    "targetWeightKg": [84.5, 85.0],
+    "proteinG": 170,
+    "fatG": [75, 85],
+    "carbsStrategy": "Остаток калорий",
+    "trainingDayCaloriesKcal": [3000, 3200],
+    "restDayCaloriesKcal": [2800, 3100],
+    "baseBulkCaloriesKcal": 3100
+  },
+  "phases": [
+    {
+      "period": "2026-04-30/2026-05-04",
+      "targetCaloriesKcal": [2700, 2800],
+      "purpose": "Переход после отпуска"
+    },
+    {
+      "period": "2026-05-05/2026-05-11",
+      "targetCaloriesKcal": [2900, 3000],
+      "actualCaloriesKcal": 2600,
+      "purpose": "Адаптационная неделя"
+    },
+    {
+      "period": "2026-05-12/2026-06-15",
+      "targetCaloriesKcal": 3100,
+      "actualCaloriesKcal": 2800,
+      "purpose": "База набора"
+    },
+    {
+      "period": "2026-06-23/2026-07-27",
+      "targetCaloriesKcal": [3150, 3300],
+      "purpose": "Основной прогресс по рабочим весам"
+    }
+  ],
+  "latestWeek": {
+    "period": "2026-05-11/2026-05-15",
+    "averageCaloriesKcal": 2800,
+    "proteinG": 170,
+    "fatG": 80,
+    "carbsG": [340, 350],
+    "weightTrend": "Вес стабилен: 81.06 -> 81.02 кг",
+    "assessment": "Калорийность ближе к поддержке, чем к набору."
+  },
+  "adjustmentRules": {
+    "ifNoWeightGainDays": [10, 14],
+    "increaseCaloriesKcal": [150, 200],
+    "decreaseCaloriesKcal": [100, 150],
+    "primaryLever": "Углеводы",
+    "proteinPolicy": "Держать стабильно"
+  }
+}

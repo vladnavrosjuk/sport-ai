@@ -43,6 +43,7 @@ Before generating any recommendations:
 | `/deload` | Plan deload week |
 | `/update-1rm` | Update strength maxes |
 | `/adjust-calories` | Adjust calorie targets |
+| `/health-check` | Check consistency across profile, plans, logs, dashboard, commands, and agent manifest |
 
 ## Interaction Guidelines
 
@@ -78,6 +79,13 @@ Before generating any recommendations:
 | Nutrition Plan | `docs/user/nutrition_plan.md` |
 | Workout Log | `docs/user/workout_log.md` |
 | Weight Log | `docs/user/weight_log.md` |
+| Strength Records | `docs/user/strength_records.md` |
+| Measurements Log | `docs/user/measurements_log.md` |
+| Recovery Log | `docs/user/recovery_log.md` |
+| Dashboard | `docs/user/dashboard.html` |
+| Structured Data | `docs/user/data/*.json` |
+| Weekly Reviews | `docs/user/weekly_reviews/` |
+| Monthly Reviews | `docs/user/monthly_reviews/` |
 
 ## Getting Started
 

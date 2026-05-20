@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-05-17",
+  "source": "docs/user/workout_log.md",
+  "program": {
+    "split": "4 дня",
+    "days": ["Пн", "Вт", "Чт", "Пт"],
+    "priorityMuscles": ["Грудь", "Бицепс", "Трицепс"]
+  },
+  "weeklySummaries": [
+    {
+      "period": "2026-03-16/2026-03-20",
+      "workoutsCompleted": 4,
+      "workoutsPlanned": 4,
+      "notes": ["Пропущены обратная бабочка, тяга в Хаммере, брусья и Хаммер сидя"]
+    },
+    {
+      "period": "2026-03-23/2026-03-27",
+      "workoutsCompleted": 4,
+      "workoutsPlanned": 4,
+      "tonnageT": 28.46,
+      "notes": ["Жим ногами пропущен", "Обратная бабочка недоделана", "Тяга НБ в сторону пропущена"]
+    },
+    {
+      "period": "2026-03-30/2026-04-04",
+      "workoutsCompleted": 4,
+      "workoutsPlanned": 4,
+      "tonnageT": 24.4,
+      "notes": ["Жим ногами и икры снова пропущены", "Часть упражнений заменялась"]
+    },
+    {
+      "period": "2026-05-04/2026-05-08",
+      "workoutsCompleted": 4,
+      "workoutsPlanned": 4,
+      "tonnageT": 31.1,
+      "averageWeightKg": 81.06,
+      "averageCaloriesKcal": 2600,
+      "mainSkip": "Жим ногами"
+    },
+    {
+      "period": "2026-05-10/2026-05-14",
+      "workoutsCompleted": 4,
+      "workoutsPlanned": 4,
+      "tonnageT": 31.37,
+      "averageWeightKg": 81.02,
+      "averageCaloriesKcal": 2800,
+      "macros": {
+        "proteinG": 170,
+        "fatG": 80,
+        "carbsG": [340, 350]
+      },
+      "mainSkip": "Жим ногами",
+      "observations": [
+        "Силовые растут даже на 2800 ккал",
+        "Вес тела не растёт вторую неделю подряд",
+        "Нужно решить статус жима ногами"
+      ]
+    }
+  ],
+  "latestKeySets": [
+    { "date": "2026-05-10", "exercise": "Наклонный Смит", "result": "50 кг × 12/12/10" },
+    { "date": "2026-05-10", "exercise": "Жим гантелей лёжа", "result": "26 кг × 11/10/10" },
+    { "date": "2026-05-11", "exercise": "EZ-сгибание стоя", "result": "22.5 кг × 3×15" },
+    { "date": "2026-05-13", "exercise": "Тяга верхнего блока", "result": "65 кг × 3×13" },
+    { "date": "2026-05-14", "exercise": "Жим гантелей сидя", "result": "20 кг × 15/14/12" }
+  ],
+  "recurringIssues": [
+    {
+      "issue": "Жим ногами часто пропускается",
+      "action": "Вернуть лёгкий вариант без натуживания или подтвердить замену/удаление"
+    },
+    {
+      "issue": "Вес не растёт при текущей калорийности",
+      "action": "Подтвердить переход к 3000-3100 ккал или +150-200 ккал"
+    }
+  ]
+}

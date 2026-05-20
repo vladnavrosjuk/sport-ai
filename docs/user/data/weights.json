@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-05-17",
+  "source": "docs/user/weight_log.md",
+  "goal": {
+    "targetWeightKg": [84.5, 85.0],
+    "targetRateKgPerWeek": [0.25, 0.5]
+  },
+  "entries": [
+    { "date": "2026-03-15", "weightKg": 80.0, "note": "Базовая линия, конец сушки" },
+    { "date": "2026-03-17", "weightKg": 80.8 },
+    { "date": "2026-03-18", "weightKg": 80.3 },
+    { "date": "2026-03-20", "weightKg": 80.5 },
+    { "date": "2026-03-24", "weightKg": 81.25 },
+    { "date": "2026-03-25", "weightKg": 81.0 },
+    { "date": "2026-03-27", "weightKg": 80.7 },
+    { "date": "2026-03-28", "weightKg": 81.35, "note": "Возможна задержка воды" },
+    { "date": "2026-05-04", "weightKg": 80.95, "caloriesKcal": 2600 },
+    { "date": "2026-05-05", "weightKg": 81.10, "caloriesKcal": 2600 },
+    { "date": "2026-05-06", "weightKg": 81.20, "caloriesKcal": 2600 },
+    { "date": "2026-05-07", "weightKg": 81.00, "caloriesKcal": 2600 },
+    { "date": "2026-05-11", "weightKg": 81.25, "caloriesKcal": 2800 },
+    { "date": "2026-05-12", "weightKg": 80.95, "caloriesKcal": 2800 },
+    { "date": "2026-05-13", "weightKg": 81.20, "caloriesKcal": 2800 },
+    { "date": "2026-05-14", "weightKg": 80.85, "caloriesKcal": 2800 },
+    { "date": "2026-05-15", "weightKg": 80.85, "caloriesKcal": 2800 }
+  ],
+  "weeklyAverages": [
+    {
+      "period": "2026-03-17/2026-03-20",
+      "averageKg": 80.5,
+      "trend": "+0.5 кг от базовой"
+    },
+    {
+      "period": "2026-03-24/2026-03-28",
+      "averageKg": 81.1,
+      "trend": "+0.6 кг от недели 1"
+    },
+    {
+      "period": "2026-05-04/2026-05-07",
+      "averageKg": 81.06,
+      "caloriesKcal": 2600,
+      "trend": "Стартовая точка набора после отпуска"
+    },
+    {
+      "period": "2026-05-11/2026-05-15",
+      "averageKg": 81.02,
+      "caloriesKcal": 2800,
+      "trend": "-0.04 кг к предыдущей неделе"
+    }
+  ],
+  "currentAssessment": {
+    "averageKg": 81.02,
+    "period": "2026-05-11/2026-05-15",
+    "status": "stable",
+    "recommendation": "Для lean bulk подтвердить переход к 3000-3100 ккал или минимум +150-200 ккал и оценить 7-10 дней."
+  }
+}

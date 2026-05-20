@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-05-17",
+  "source": ".cursor/project/user_profile.md",
+  "person": {
+    "name": "Влад",
+    "age": 28,
+    "sex": "male",
+    "heightCm": 182,
+    "weightKg": 81.02,
+    "weightNote": "Средний вес Пн-Пт, 11-15.05"
+  },
+  "training": {
+    "experience": "2 года",
+    "level": "Средний",
+    "style": "Бодибилдинг",
+    "daysPerWeek": 4,
+    "days": ["Пн", "Вт", "Чт", "Пт"],
+    "sessionDurationMin": [60, 90],
+    "equipment": "Полноценный тренажёрный зал",
+    "priorityMuscles": ["Грудь", "Бицепс", "Трицепс"],
+    "constraints": [
+      "Избегать тяжёлых приседов и становой тяги",
+      "Ноги в поддерживающем режиме",
+      "RPE 8-9 после адаптации, отказ только в последних подходах изоляции"
+    ]
+  },
+  "goal": {
+    "phase": "Контролируемый набор массы",
+    "period": "май-август 2026",
+    "targetWeightKg": [84.5, 85.0],
+    "targetRateKgPerWeek": [0.25, 0.5],
+    "context": "Lean bulk после отпуска без резкого роста талии"
+  },
+  "lifestyle": {
+    "work": "Программист, сидячая работа",
+    "stepsPerDay": 10000,
+    "sleepHours": [7, 8],
+    "stress": "Средний"
+  },
+  "nutrition": {
+    "restrictions": [],
+    "proteinG": 170,
+    "fatG": [75, 85],
+    "baseBulkCalories": 3100,
+    "maintenanceCalories": [2700, 2800]
+  }
+}

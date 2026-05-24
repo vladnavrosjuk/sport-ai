@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-05-17",
+  "updatedAt": "2026-05-24",
   "source": "docs/user/weight_log.md",
   "goal": {
     "targetWeightKg": [84.5, 85.0],
@@ -23,7 +23,11 @@
     { "date": "2026-05-12", "weightKg": 80.95, "caloriesKcal": 2800 },
     { "date": "2026-05-13", "weightKg": 81.20, "caloriesKcal": 2800 },
     { "date": "2026-05-14", "weightKg": 80.85, "caloriesKcal": 2800 },
-    { "date": "2026-05-15", "weightKg": 80.85, "caloriesKcal": 2800 }
+    { "date": "2026-05-15", "weightKg": 80.85, "caloriesKcal": 2800 },
+    { "date": "2026-05-19", "weightKg": 81.80, "caloriesKcal": 3000 },
+    { "date": "2026-05-20", "weightKg": 81.70, "caloriesKcal": 3000 },
+    { "date": "2026-05-21", "weightKg": 82.00, "caloriesKcal": 3000 },
+    { "date": "2026-05-22", "weightKg": 81.20, "caloriesKcal": 3000 }
   ],
   "weeklyAverages": [
     {
@@ -47,12 +51,18 @@
       "averageKg": 81.02,
       "caloriesKcal": 2800,
       "trend": "-0.04 кг к предыдущей неделе"
+    },
+    {
+      "period": "2026-05-19/2026-05-22",
+      "averageKg": 81.68,
+      "caloriesKcal": 3000,
+      "trend": "+0.66 кг к предыдущей неделе"
     }
   ],
   "currentAssessment": {
-    "averageKg": 81.02,
-    "period": "2026-05-11/2026-05-15",
-    "status": "stable",
-    "recommendation": "Для lean bulk подтвердить переход к 3000-3100 ккал или минимум +150-200 ккал и оценить 7-10 дней."
+    "averageKg": 81.68,
+    "period": "2026-05-19/2026-05-22",
+    "status": "gaining",
+    "recommendation": "Держать 3000 ккал на неделю 23-29.05. Не поднимать до 3100 без стагнации 10-14 дней."
   }
 }

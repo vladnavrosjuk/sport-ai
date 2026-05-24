@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-05-17",
+  "updatedAt": "2026-05-24",
   "source": ".cursor/project/user_profile.md",
   "person": {
     "name": "Влад",
     "age": 28,
     "sex": "male",
     "heightCm": 182,
-    "weightKg": 81.02,
-    "weightNote": "Средний вес Пн-Пт, 11-15.05"
+    "weightKg": 81.68,
+    "weightNote": "Средний вес Вт-Пт, 19-22.05"
   },
   "training": {
     "experience": "2 года",
@@ -42,7 +42,8 @@
     "restrictions": [],
     "proteinG": 170,
     "fatG": [75, 85],
-    "baseBulkCalories": 3100,
+    "baseBulkCalories": 3000,
+    "baseBulkCaloriesNote": "Держать до пересмотра 31.05-02.06; было 3100 в плане",
     "maintenanceCalories": [2700, 2800]
   }
 }

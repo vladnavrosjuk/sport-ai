@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-05-20",
+  "updatedAt": "2026-05-24",
   "sources": [
     "docs/user/measurements_log.md",
     "docs/user/recovery_log.md",
@@ -15,19 +15,26 @@
     "photoCheckFrequencyWeeks": [2, 4]
   },
   "current": {
-    "week": "2026-W20",
-    "averageWeightKg": 81.02,
-    "weeklyWeightChangeKg": -0.04,
-    "weeklyWeightChangePercent": -0.05,
+    "week": "2026-W21",
+    "averageWeightKg": 81.68,
+    "weeklyWeightChangeKg": 0.66,
+    "weeklyWeightChangePercent": 0.81,
     "waistCm": null,
-    "sleepHours": [7, 8],
-    "stress": "medium",
-    "stepsPerDay": 10000
+    "sleepHours": [8, 8],
+    "stress": "low",
+    "stepsPerDay": 11000,
+    "backSoreness": "end_of_week"
+  },
+  "upcomingEvents": {
+    "tattooDate": "2026-06-21",
+    "gymOffPeriod": "2026-06-22/2026-06-28",
+    "mesocycle2Start": "2026-06-29",
+    "lastFullWeekBeforeTattoo": "2026-06-09/2026-06-15"
   },
   "decisionRules": [
     {
       "condition": "weight_stable_10_14_days_and_waist_stable",
-      "recommendation": "Propose +150-200 kcal from carbohydrates."
+      "recommendation": "Propose +100-150 kcal from carbohydrates."
     },
     {
       "condition": "weight_gain_above_0_5kg_per_week_for_2_weeks_or_waist_rises_fast",

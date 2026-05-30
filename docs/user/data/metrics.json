@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-05-24",
+  "updatedAt": "2026-05-30",
   "sources": [
     "docs/user/measurements_log.md",
     "docs/user/recovery_log.md",
@@ -15,15 +15,17 @@
     "photoCheckFrequencyWeeks": [2, 4]
   },
   "current": {
-    "week": "2026-W21",
-    "averageWeightKg": 81.68,
-    "weeklyWeightChangeKg": 0.66,
-    "weeklyWeightChangePercent": 0.81,
+    "week": "2026-W22",
+    "averageWeightKg": 81.50,
+    "weeklyWeightChangeKg": -0.18,
+    "weeklyWeightChangePercent": -0.22,
+    "caloriesKcal": 3100,
     "waistCm": null,
     "sleepHours": [8, 8],
-    "stress": "low",
-    "stepsPerDay": 11000,
-    "backSoreness": "end_of_week"
+    "stress": null,
+    "stepsPerDay": 10000,
+    "backSoreness": "mild_spine_joints",
+    "alcoholSessionsPerWeek": 3
   },
   "upcomingEvents": {
     "tattooDate": "2026-06-21",

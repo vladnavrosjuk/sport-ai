@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-05-24",
+  "updatedAt": "2026-05-30",
   "source": "docs/user/nutrition_plan.md",
   "phase": "Lean bulk после отпуска",
   "targets": {
@@ -8,9 +8,9 @@
     "proteinG": 170,
     "fatG": [75, 85],
     "carbsStrategy": "Остаток калорий",
-    "trainingDayCaloriesKcal": 3000,
-    "restDayCaloriesKcal": 3000,
-    "baseBulkCaloriesKcal": 3000
+    "trainingDayCaloriesKcal": 3100,
+    "restDayCaloriesKcal": 3100,
+    "baseBulkCaloriesKcal": 3100
   },
   "phases": [
     {
@@ -28,12 +28,18 @@
       "period": "2026-05-12/2026-05-22",
       "targetCaloriesKcal": 3100,
       "actualCaloriesKcal": [2800, 3000],
-      "purpose": "Набор; факт 3000 достаточен для текущего темпа"
+      "purpose": "Набор"
     },
     {
       "period": "2026-05-23/2026-05-29",
       "targetCaloriesKcal": 3000,
-      "purpose": "Удержание 3000; пересмотр 31.05-02.06"
+      "actualCaloriesKcal": 3000,
+      "purpose": "Стагнация веса на 3000"
+    },
+    {
+      "period": "2026-05-30/2026-06-05",
+      "targetCaloriesKcal": 3100,
+      "purpose": "Подтверждено пользователем 30.05"
     },
     {
       "period": "2026-06-29/2026-07-27",
@@ -42,13 +48,13 @@
     }
   ],
   "latestWeek": {
-    "period": "2026-05-16/2026-05-22",
+    "period": "2026-05-23/2026-05-29",
     "averageCaloriesKcal": 3000,
     "proteinG": 170,
-    "fatG": 85,
-    "carbsG": [370, 380],
-    "weightTrend": "81.02 -> 81.68 кг (+0.66 кг/нед)",
-    "assessment": "Держать 3000 ккал; не форсировать 3100."
+    "fatG": [75, 85],
+    "carbsG": [350, 380],
+    "weightTrend": "81.68 -> 81.50 кг (-0.18 кг/нед)",
+    "assessment": "Переход на 3100 ккал с 30.05"
   },
   "adjustmentRules": {
     "ifNoWeightGainDays": [10, 14],

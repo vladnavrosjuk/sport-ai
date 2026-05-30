@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-05-24",
+  "updatedAt": "2026-05-30",
   "source": "docs/user/weight_log.md",
   "goal": {
     "targetWeightKg": [84.5, 85.0],
@@ -27,7 +27,13 @@
     { "date": "2026-05-19", "weightKg": 81.80, "caloriesKcal": 3000 },
     { "date": "2026-05-20", "weightKg": 81.70, "caloriesKcal": 3000 },
     { "date": "2026-05-21", "weightKg": 82.00, "caloriesKcal": 3000 },
-    { "date": "2026-05-22", "weightKg": 81.20, "caloriesKcal": 3000 }
+    { "date": "2026-05-22", "weightKg": 81.20, "caloriesKcal": 3000 },
+    { "date": "2026-05-23", "weightKg": 81.40, "caloriesKcal": 3000 },
+    { "date": "2026-05-24", "weightKg": 82.00, "caloriesKcal": 3000 },
+    { "date": "2026-05-25", "weightKg": 81.50, "caloriesKcal": 3000 },
+    { "date": "2026-05-26", "weightKg": 81.40, "caloriesKcal": 3000 },
+    { "date": "2026-05-27", "weightKg": 81.10, "caloriesKcal": 3000 },
+    { "date": "2026-05-28", "weightKg": 81.60, "caloriesKcal": 3000 }
   ],
   "weeklyAverages": [
     {
@@ -57,12 +63,18 @@
       "averageKg": 81.68,
       "caloriesKcal": 3000,
       "trend": "+0.66 кг к предыдущей неделе"
+    },
+    {
+      "period": "2026-05-23/2026-05-29",
+      "averageKg": 81.50,
+      "caloriesKcal": 3000,
+      "trend": "-0.18 кг к W21; стагнация"
     }
   ],
   "currentAssessment": {
-    "averageKg": 81.68,
-    "period": "2026-05-19/2026-05-22",
-    "status": "gaining",
-    "recommendation": "Держать 3000 ккал на неделю 23-29.05. Не поднимать до 3100 без стагнации 10-14 дней."
+    "averageKg": 81.50,
+    "period": "2026-05-23/2026-05-29",
+    "status": "stalled",
+    "recommendation": "3100 ккал на неделю 30.05-05.06. Пересмотр 07.06."
   }
 }

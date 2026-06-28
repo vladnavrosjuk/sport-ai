@@ -1,37 +1,36 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-05-24",
+  "updatedAt": "2026-06-10",
   "source": "docs/user/strength_records.md",
-  "phase": "Контролируемый набор май-август 2026",
+  "phase": "Контролируемый набор май-август 2026 — off после тату",
   "goal": "К концу июля вернуть и превысить доотпускные рабочие веса, сохраняя технику и контролируемый набор массы.",
   "records": [
     {
       "exercise": "Наклонный жим в Смите",
-      "latestBest": "50 кг × 12/12/11",
-      "nextTarget": "52.5 кг × 10 × 3",
+      "latestBest": "55 кг × 12/12/10",
       "targetBy2026-07-27": "52.5-55 кг × 3×8-10",
-      "status": "Прогрессия подтверждена 24.05",
-      "progressionRequiresConfirmation": false
+      "status": "Заморозить до возврата после off",
+      "progressionRequiresConfirmation": true
     },
     {
       "exercise": "Жим гантелей лёжа",
-      "latestBest": "26 кг × 12/10/10",
+      "latestBest": "26 кг × 3×12",
       "targetBy2026-07-27": "26 кг × 2-3×10-12",
-      "status": "Закрепить 26 кг",
+      "status": "Цель 3×12 закрыта; заморозить",
       "progressionRequiresConfirmation": false
     },
     {
       "exercise": "Жим гантелей сидя",
-      "latestBest": "20 кг × 12/14/12",
+      "latestBest": "20 кг × 3×15",
       "targetBy2026-07-27": "22 кг × 3×8-10 или 20 кг × 3×12",
-      "status": "Закрепить 20 кг",
+      "status": "При возврате: 20×12×3",
       "progressionRequiresConfirmation": true
     },
     {
       "exercise": "EZ-сгибание стоя",
-      "latestBest": "25 кг × 11/10",
+      "latestBest": "25 кг × 3×12",
       "targetBy2026-07-27": "22.5-25 кг × 3×10-12",
-      "status": "Закрепить 25 кг",
+      "status": "Закрепить",
       "progressionRequiresConfirmation": false
     },
     {
@@ -42,38 +41,45 @@
       "progressionRequiresConfirmation": false
     },
     {
+      "exercise": "Разгибание трицепса стоя",
+      "latestBest": "30 кг × 15/12",
+      "targetBy2026-07-27": "25 кг × 3×12-15",
+      "status": "Закрепить 30×12-15 при возврате",
+      "progressionRequiresConfirmation": true
+    },
+    {
       "exercise": "Тяга верхнего блока",
       "latestBest": "70 кг × 3×12",
       "targetBy2026-07-27": "67.5-70 кг × 3×10-12",
-      "status": "Закрепить; не повышать (крепатура)",
+      "status": "Не повышать",
       "progressionRequiresConfirmation": false
     },
     {
       "exercise": "Тяга Хаммера одной рукой",
       "latestBest": "45 кг × 3×15",
       "targetBy2026-07-27": "45 кг × 10-12",
-      "status": "Закрепить 45 кг",
+      "status": "Закрепить",
       "progressionRequiresConfirmation": false
     },
     {
       "exercise": "Тяга нижнего блока одной рукой",
       "latestBest": "65 кг × 3×12",
       "targetBy2026-07-27": "65-67.5 кг × 3×10-12",
-      "status": "Закрепить",
+      "status": "Не повышать",
       "progressionRequiresConfirmation": false
     },
     {
       "exercise": "Разгибание ног",
-      "latestBest": "60 кг × 4×12 (план)",
+      "latestBest": "60 кг × 4×12",
       "targetBy2026-07-27": "65 кг × 4×10-12",
-      "status": "Вернуть в тренировку",
+      "status": "Закрепить → 4×15",
       "progressionRequiresConfirmation": false
     },
     {
       "exercise": "Жим ногами",
-      "latestBest": "Пропущен 17.05",
+      "latestBest": "Пропущен 01.06",
       "targetBy2026-07-27": "100-120 кг × 3×12-15",
-      "status": "Обязательно вернуть на след. ноги",
+      "status": "Вернуть 100×15×2 при возврате",
       "progressionRequiresConfirmation": true
     }
   ]

@@ -200,7 +200,7 @@
 <body>
 
 <h1>Sport AI</h1>
-<p class="subtitle">Влад &middot; 81.50 кг &middot; Набор май-август</p>
+<p class="subtitle">Влад &middot; ~82.75 кг &middot; Неделя 2 возврата</p>
 
 <div class="tabs">
   <div class="tab active" onclick="showTab(event, 'overview')">Обзор</div>
@@ -215,21 +215,22 @@
 
 <div id="overview" class="panel active">
   <div class="metric-row">
-    <div class="metric-box"><div class="val">81.50</div><div class="lbl">средний 23-29.05, кг</div></div>
+    <div class="metric-box"><div class="val">82.75</div><div class="lbl">оценка 21-28.06, кг</div></div>
     <div class="metric-box"><div class="val">84.5-85</div><div class="lbl">цель, кг</div></div>
-    <div class="metric-box"><div class="val">+0.25-0.5</div><div class="lbl">кг/нед</div></div>
-    <div class="metric-box"><div class="val">4</div><div class="lbl">тренировки/нед</div></div>
+    <div class="metric-box"><div class="val">3000</div><div class="lbl">ккал с 30.06</div></div>
+    <div class="metric-box"><div class="val">4/4</div><div class="lbl">тренировки W26</div></div>
   </div>
 
   <div class="card open">
-    <div class="card-header" onclick="toggle(this)">Сегодня в зале</div>
+    <div class="card-header" onclick="toggle(this)">Сегодня</div>
     <div class="card-body">
-      <div id="todayWorkout" class="note">Определяю тренировку по дню недели...</div>
+      <div id="todayWorkout" class="note">Определяю режим дня...</div>
       <ul class="quick-list">
-        <li><input type="checkbox"><span>Разминка 5-8 минут + 1-2 лёгких разминочных подхода на первое движение</span></li>
-        <li><input type="checkbox"><span>Рабочие подходы вести по плану: сначала техника и диапазон повторений, затем вес</span></li>
-        <li><input type="checkbox"><span>RPE 7-9; отказ только в последнем подходе изоляции</span></li>
-        <li><input type="checkbox"><span>После тренировки записать веса, повторы, RPE и пропуски через `/log-workout`</span></li>
+        <li><input type="checkbox"><span><strong>3000</strong> ккал · белок <strong>170 г</strong> · ~400 У</span></li>
+        <li><input type="checkbox"><span>RPE <strong>7-8</strong> · прогрессии <strong>нет</strong> до ~07.07</span></li>
+        <li><input type="checkbox"><span><strong>Жим ногами 90-100</strong> + <strong>икры 70-80</strong> — обязательны</span></li>
+        <li><input type="checkbox"><span>Смит <strong>55×10×3</strong> · тяги <strong>не ↑</strong></span></li>
+        <li><input type="checkbox"><span>Сон 7-8 ч; вес утром ≥4 дня; шаги 8-10k</span></li>
       </ul>
     </div>
   </div>
@@ -238,12 +239,12 @@
     <div class="card-header" onclick="toggle(this)">Актуальность данных</div>
     <div class="card-body">
       <div class="freshness-grid">
-        <div class="freshness-item"><strong>Вес</strong>28.05, средний 81.50 кг</div>
-        <div class="freshness-item"><strong>Тренировка</strong>28.05, плечи + грудь + трицепс</div>
-        <div class="freshness-item"><strong>Питание</strong>30.05, <strong>3100</strong> ккал</div>
-        <div class="freshness-item"><strong>Обзор</strong>30.05, weekly W22</div>
+        <div class="freshness-item"><strong>Вес</strong>28.06, ~82.75 кг (82.5-83)</div>
+        <div class="freshness-item"><strong>Тренировка</strong>26.06, спина 8.91 т</div>
+        <div class="freshness-item"><strong>Питание</strong>28.06, <strong>3000</strong> ккал с 30.06</div>
+        <div class="freshness-item"><strong>Обзор</strong>28.06, weekly W26</div>
       </div>
-      <div class="note">Тату 21.06 → off 22-28.06. Смит 52.5 закрепить. Тяги не ↑ при боли в спине.</div>
+      <div class="note warn">W26: <strong>4/4</strong> тренировки. Жим ногами/икры пропущены 22.06 — приоритет на <strong>01.07</strong>. Без прогрессии до ~07.07.</div>
     </div>
   </div>
 
@@ -261,14 +262,15 @@
   </div>
 
   <div class="card open">
-    <div class="card-header" onclick="toggle(this)">План недели 30.05-05.06</div>
+    <div class="card-header" onclick="toggle(this)">План недели 30.06-06.07</div>
     <div class="card-body">
-      <div class="note">Мезоцикл 1, неделя 5: 3100 ккал; закрепить силовые; тяги не ↑; МФР 5-10 мин.</div>
+      <div class="note">Неделя 2 адаптации. Силовые сохранены — держать веса, добрать ноги.</div>
       <table>
-        <tr><td>Фаза</td><td>Мезоцикл 1, неделя 5</td></tr>
-        <tr><td>Цель недели</td><td>4/4; вес Вт-Пт 81.7-82.2; талия 1 замер</td></tr>
-        <tr><td>Питание</td><td><strong>3100</strong> ккал · 170 Б · 80 Ж · 390-410 У</td></tr>
-        <tr><td>Контроль</td><td>Пересмотр калорий 07.06; алкоголь ≤1</td></tr>
+        <tr><td>Фаза</td><td>Мезоцикл 2, неделя 2 входа</td></tr>
+        <tr><td>Цель недели</td><td>4 тренировки; жим ногами + икры; полный Пт</td></tr>
+        <tr><td>Питание</td><td><strong>3000</strong> ккал · 170 Б / 80 Ж / ~400 У</td></tr>
+        <tr><td>Пересмотр</td><td><strong>07.07</strong> → 3100 если вес стоит 10-14 дней</td></tr>
+        <tr><td>Прогрессия</td><td><strong>Нет</strong> до ~07.07</td></tr>
       </table>
     </div>
   </div>
@@ -277,11 +279,11 @@
     <div class="card-header" onclick="toggle(this)">Прогресс веса</div>
     <div class="card-body">
       <p class="section-title">Цель: 84.5-85.0 кг</p>
-      <div class="progress-bar"><div class="fill" style="width: 33%"></div></div>
+      <div class="progress-bar"><div class="fill" style="width: 48%"></div></div>
       <div style="display:flex;justify-content:space-between;font-size:0.75rem;color:var(--text-muted)">
-        <span>81.50 кг</span><span>84.5-85.0 кг</span>
+        <span>82.75 кг</span><span>84.5-85.0 кг</span>
       </div>
-      <div class="note">23-29.05: 81.40 / 82.00 / 81.50 / 81.40 / 81.10 / 81.60, средний 81.50 кг. С 30.05: <strong>3100</strong> ккал.</div>
+      <div class="note">21-28.06: диапазон <strong>82.5-83</strong>, оценка <strong>82.75</strong> (+0.65 к off-базе 82.10). Питание <strong>2700-2800</strong> ккал.</div>
     </div>
   </div>
 
@@ -289,22 +291,20 @@
     <div class="card-header" onclick="toggle(this)">Контрольные даты</div>
     <div class="card-body">
       <table>
-        <tr><td>30.05</td><td>Weekly W22: 81.50 кг → <strong>3100</strong> ккал</td></tr>
-        <tr><td>07.06</td><td>Пересмотр калорий по среднему весу Вт-Пт</td></tr>
-        <tr><td>09-15.06</td><td>Последняя полная неделя перед тату</td></tr>
-        <tr><td>21.06</td><td>Тату → off 22-28.06</td></tr>
-        <tr><td>29.06</td><td>Старт мезоцикла 2 (входная неделя)</td></tr>
+        <tr><td>21-28.06</td><td>W26: 4/4 тренировки; вес ~82.75; жим ногами пропущен</td></tr>
+        <tr><td>30.06-06.07</td><td>Неделя 2 адаптации · жим ногами обязателен</td></tr>
+        <tr><td>~07.07</td><td>Можно обсудить прогрессию весов</td></tr>
         <tr><td>10.08</td><td>Итог: вес, талия, фото, силовые</td></tr>
       </table>
     </div>
   </div>
 
   <div class="card open">
-    <div class="card-header" onclick="toggle(this)">Риски недели</div>
+    <div class="card-header" onclick="toggle(this)">Риски возврата</div>
     <div class="card-body">
-      <div class="note warn">Спина/суставы — тяги 65/70/45 <strong>не повышать</strong>; МФР 5-10 мин.</div>
-      <div class="note warn">Алкоголь 3× на W22 — на этой неделе ≤1 раз.</div>
-      <div class="note">Смит 52.5: закрепить 3×10-12, не 55 кг. Калории <strong>3100</strong>.</div>
+      <div class="note danger">Жим ногами и икры — <strong>3-й пропуск</strong>. На 01.07 сделать в первую очередь.</div>
+      <div class="note warn">Смит <strong>55×10×3</strong> — закрепить, не 57.5. Гантели <strong>26×12</strong> — держать.</div>
+      <div class="note">Тяги <strong>65/70/45</strong> — не повышать. Пт-сессия 25.06 была укорочена — на след. неделе полный объём.</div>
     </div>
   </div>
 </div>
@@ -322,17 +322,25 @@
           <div class="t-label">Адаптационная неделя <span class="badge badge-green">готово</span></div>
           <div class="t-sub">5-11 мая &middot; 4/4 тренировки &middot; средний вес 81.06 &middot; факт ~2600 ккал</div>
         </li>
+        <li class="done">
+          <div class="t-label">Мезоцикл 1 <span class="badge badge-green">пауза</span></div>
+          <div class="t-sub">12 мая - 08 июня &middot; вес 82.10 &middot; Смит <strong>55</strong></div>
+        </li>
+        <li class="done">
+          <div class="t-label">Off после тату <span class="badge badge-green">готово</span></div>
+          <div class="t-sub">09-22.06 &middot; тату + болезнь &middot; <strong>2700-2800</strong> ккал</div>
+        </li>
+        <li class="done">
+          <div class="t-label">Входная неделя мезо 2 <span class="badge badge-green">готово</span></div>
+          <div class="t-sub">21-28.06 &middot; 4/4 тренировки &middot; вес ~82.75 &middot; 2700-2800 ккал</div>
+        </li>
         <li class="current">
-          <div class="t-label">Мезоцикл 1 <span class="badge badge-blue">сейчас</span></div>
-          <div class="t-sub">12 мая - 15 июня &middot; вес 81.50, <strong>3100</strong> ккал с 30.05</div>
+          <div class="t-label">Адаптация неделя 2 <span class="badge badge-orange">сейчас</span></div>
+          <div class="t-sub">30.06-06.07 &middot; жим ногами + икры &middot; без прогрессии</div>
         </li>
         <li class="future">
-          <div class="t-label">Перед тату + off</div>
-          <div class="t-sub">9-15 июн рабочая &middot; 21.06 тату &middot; 22-28.06 без зала</div>
-        </li>
-        <li class="future">
-          <div class="t-label">Мезоцикл 2</div>
-          <div class="t-sub">29 июня - 27 июля &middot; входная неделя, затем прогресс</div>
+          <div class="t-label">Мезоцикл 2 — основной прогресс</div>
+          <div class="t-sub">07.07 - 27.07 &middot; после закрепления возврата</div>
         </li>
         <li class="future">
           <div class="t-label">Контрольная неделя</div>
@@ -355,14 +363,13 @@
   </div>
 
   <div class="card open">
-    <div class="card-header" onclick="toggle(this)">Неделя 30.05-05.06: режим</div>
+    <div class="card-header" onclick="toggle(this)">Неделя 30.06-06.07: режим</div>
     <div class="card-body">
       <table>
-        <tr><td>Пн</td><td>Смит <strong>52.5×10-12</strong>; бабочка 35; гантели 26→3×12; трицепс 27.5</td></tr>
-        <tr><td>Вт</td><td>Ноги <strong>40/60/100</strong> + бицепс EZ <strong>25×12</strong></td></tr>
-        <tr><td>Чт</td><td>Спина: <strong>65/70/45</strong> — не ↑; молот 16×12×3</td></tr>
-        <tr><td>Пт</td><td>Жим сидя <strong>20×12</strong>; бабочка 30; канат 22.5</td></tr>
-        <tr><td>Сб-Вс</td><td>Отдых; <strong>3100</strong> ккал; талия; МФР</td></tr>
+        <tr><td>Объём</td><td><strong>85-90%</strong> · полные сессии, особенно Вт и Пт</td></tr>
+        <tr><td>Веса</td><td>Держать факт W26 · <strong>без ↑</strong></td></tr>
+        <tr><td>RPE</td><td><strong>7-8</strong> · без отказа</td></tr>
+        <tr><td>Калории</td><td><strong>3000</strong> → пересмотр <strong>07.07</strong></td></tr>
       </table>
     </div>
   </div>
@@ -372,16 +379,16 @@
   <div class="card open">
     <div class="card-header" onclick="toggle(this)">Понедельник: Грудь + Передняя дельта + Трицепс</div>
     <div class="card-body">
-      <div style="font-size:0.8rem;color:var(--text-muted);margin-bottom:8px">24.05: 52.5×12/12/9 &middot; цель <strong>3×10-12</strong>, не 55 кг</div>
+      <div style="font-size:0.8rem;color:var(--text-muted);margin-bottom:8px">21.06: Смит <strong>55×10×3</strong> · бабочка <strong>35×12×3</strong> · гантели <strong>26×12×3</strong></div>
       <p class="section-title">Грудь</p>
-      <div class="ex-row"><span class="exercise-num">1</span><div class="ex-info"><div class="ex-name">Сведение рук в тренажёре</div><div class="ex-detail">3×12 &middot; преактивация</div></div><div class="ex-weight">35 кг</div></div>
-      <div class="ex-row"><span class="exercise-num">2</span><div class="ex-info"><div class="ex-name">Жим в Смите на наклонной 30°</div><div class="ex-detail">52.5×10-12×3 &middot; RPE 8-9</div></div><div class="ex-weight">52.5 кг</div></div>
-      <div class="ex-row"><span class="exercise-num">3</span><div class="ex-info"><div class="ex-name">Жим гантелей лёжа</div><div class="ex-detail">цель <strong>3×12</strong></div></div><div class="ex-weight">26 кг</div></div>
+      <div class="ex-row"><span class="exercise-num">1</span><div class="ex-info"><div class="ex-name">Сведение рук в тренажёре</div><div class="ex-detail">3×12 · закрепить</div></div><div class="ex-weight">35 кг</div></div>
+      <div class="ex-row"><span class="exercise-num">2</span><div class="ex-info"><div class="ex-name">Жим в Смите на наклонной 30°</div><div class="ex-detail"><strong>55×10×3</strong> · не 57.5</div></div><div class="ex-weight">55 кг</div></div>
+      <div class="ex-row"><span class="exercise-num">3</span><div class="ex-info"><div class="ex-name">Жим гантелей лёжа</div><div class="ex-detail"><strong>26×12×3</strong></div></div><div class="ex-weight">26 кг</div></div>
       <p class="section-title">Дельта + трицепс</p>
       <div class="ex-row"><span class="exercise-num">4</span><div class="ex-info"><div class="ex-name">Жим гантелей сидя</div><div class="ex-detail">20×12×3</div></div><div class="ex-weight">20 кг</div></div>
-      <div class="ex-row"><span class="exercise-num">5</span><div class="ex-info"><div class="ex-name">Разгибание на блоке стоя</div><div class="ex-detail">3×15 &middot; закрепить</div></div><div class="ex-weight">27.5 кг</div></div>
-      <div class="ex-row"><span class="exercise-num">6</span><div class="ex-info"><div class="ex-name">Разгибание на блоке вниз (канат)</div><div class="ex-detail">3×15</div></div><div class="ex-weight">22.5 кг</div></div>
-      <div class="note">Смит: повторения, не вес. 3-й подход &lt;10 — остаться на 52.5.</div>
+      <div class="ex-row"><span class="exercise-num">5</span><div class="ex-info"><div class="ex-name">Разгибание на блоке стоя</div><div class="ex-detail"><strong>27.5×15×3</strong></div></div><div class="ex-weight">27.5 кг</div></div>
+      <div class="ex-row"><span class="exercise-num">6</span><div class="ex-info"><div class="ex-name">Разгибание на блоке вниз (канат)</div><div class="ex-detail">22.5×15×3</div></div><div class="ex-weight">22.5 кг</div></div>
+      <div class="note warn">Без прогрессии до ~07.07. Смит — закрепить 55×10, не гнаться за 12 повторами сразу.</div>
     </div>
   </div>
 </div>
@@ -390,17 +397,18 @@
   <div class="card open">
     <div class="card-header" onclick="toggle(this)">Вторник: Ноги + Бицепс</div>
     <div class="card-body">
-      <div style="font-size:0.8rem;color:var(--text-muted);margin-bottom:8px">25.05: ноги выполнены &middot; 16.75 т</div>
+      <div style="font-size:0.8rem;color:var(--text-muted);margin-bottom:8px">22.06: жим ногами <strong>пропущен</strong> · 01.07 — <strong>обязателен</strong></div>
       <p class="section-title">Ноги</p>
-      <div class="ex-row"><span class="exercise-num">1</span><div class="ex-info"><div class="ex-name">Сгибание ног лёжа</div><div class="ex-detail">4×15 &middot; закрепить</div></div><div class="ex-weight">40 кг</div></div>
-      <div class="ex-row"><span class="exercise-num">2</span><div class="ex-info"><div class="ex-name">Разгибание ног</div><div class="ex-detail">4×12→<strong>4×15</strong></div></div><div class="ex-weight">60 кг</div></div>
+      <div class="ex-row"><span class="exercise-num">1</span><div class="ex-info"><div class="ex-name">Сгибание ног лёжа</div><div class="ex-detail">4×12-15 · 22.06: 42.5</div></div><div class="ex-weight">42.5 кг</div></div>
+      <div class="ex-row"><span class="exercise-num">2</span><div class="ex-info"><div class="ex-name">Разгибание ног</div><div class="ex-detail">4×12-15 · 22.06: 60×15×4</div></div><div class="ex-weight">60 кг</div></div>
       <p class="section-title">Бицепс</p>
-      <div class="ex-row"><span class="exercise-num">3</span><div class="ex-info"><div class="ex-name">Сгибание рук стоя / EZ</div><div class="ex-detail"><strong>25×12×3</strong></div></div><div class="ex-weight">25 кг</div></div>
-      <div class="ex-row"><span class="exercise-num">4</span><div class="ex-info"><div class="ex-name">Сгибание на наклонной 45°</div><div class="ex-detail">3×12 &middot; цель закрыта</div></div><div class="ex-weight">14 кг</div></div>
-      <div class="ex-row"><span class="exercise-num">5</span><div class="ex-info"><div class="ex-name">Сгибание на нижнем блоке</div><div class="ex-detail">2×15 &middot; пампинг</div></div><div class="ex-weight">20 кг</div></div>
+      <div class="ex-row"><span class="exercise-num">3</span><div class="ex-info"><div class="ex-name">Сгибание рук стоя / EZ</div><div class="ex-detail"><strong>25×10-12×3</strong></div></div><div class="ex-weight">25 кг</div></div>
+      <div class="ex-row"><span class="exercise-num">4</span><div class="ex-info"><div class="ex-name">Сгибание на наклонной 45°</div><div class="ex-detail"><strong>14×12×3</strong></div></div><div class="ex-weight">14 кг</div></div>
+      <div class="ex-row"><span class="exercise-num">5</span><div class="ex-info"><div class="ex-name">Сгибание на нижнем блоке</div><div class="ex-detail">2-3×15</div></div><div class="ex-weight">22.5 кг</div></div>
       <p class="section-title">Ноги — часть 2</p>
-      <div class="ex-row"><span class="exercise-num">6</span><div class="ex-info"><div class="ex-name">Жим ногами</div><div class="ex-detail">100×15×2, 80×20</div></div><div class="ex-weight">100 кг</div></div>
-      <div class="ex-row"><span class="exercise-num">7</span><div class="ex-info"><div class="ex-name">Подъём на носки сидя</div><div class="ex-detail">4×15 &middot; пауза вверху</div></div><div class="ex-weight">80 кг</div></div>
+      <div class="ex-row"><span class="exercise-num">6</span><div class="ex-info"><div class="ex-name">Жим ногами</div><div class="ex-detail"><strong>90-100×12-15×2</strong> <span class="badge badge-orange">обязательно</span></div></div><div class="ex-weight">90-100 кг</div></div>
+      <div class="ex-row"><span class="exercise-num">7</span><div class="ex-info"><div class="ex-name">Подъём на носки сидя</div><div class="ex-detail"><strong>70-80×15×3-4</strong> <span class="badge badge-orange">обязательно</span></div></div><div class="ex-weight">70-80 кг</div></div>
+      <div class="note danger">Жим ногами и икры пропущены 22.06 — сделать в первую очередь на след. Вт.</div>
     </div>
   </div>
 </div>
@@ -409,14 +417,14 @@
   <div class="card open">
     <div class="card-header" onclick="toggle(this)">Четверг: Спина + Задняя дельта + Бицепс</div>
     <div class="card-body">
-      <div style="font-size:0.8rem;color:var(--text-muted);margin-bottom:8px">27.05: 70/65/45 &middot; спина — <strong>не ↑</strong></div>
+      <div style="font-size:0.8rem;color:var(--text-muted);margin-bottom:8px">26.06: тяги на пике · <strong>не ↑</strong></div>
       <p class="section-title">Спина</p>
-      <div class="ex-row"><span class="exercise-num">1</span><div class="ex-info"><div class="ex-name">Подтягивания в гравитроне</div><div class="ex-detail">3×12 &middot; широкая амплитуда</div></div><div class="ex-weight">-21 кг</div></div>
-      <div class="ex-row"><span class="exercise-num">2</span><div class="ex-info"><div class="ex-name">Тяга нижнего блока одной рукой</div><div class="ex-detail">65×12×3 &middot; закрепить</div></div><div class="ex-weight">65 кг</div></div>
-      <div class="ex-row"><span class="exercise-num">3</span><div class="ex-info"><div class="ex-name">Тяга верхнего блока обратным хватом</div><div class="ex-detail">70×12×3 &middot; не повышать</div></div><div class="ex-weight">70 кг</div></div>
-      <div class="ex-row"><span class="exercise-num">4</span><div class="ex-info"><div class="ex-name">Тяга в Хаммере одной рукой</div><div class="ex-detail">45×15×3 &middot; закрепить</div></div><div class="ex-weight">45 кг</div></div>
+      <div class="ex-row"><span class="exercise-num">1</span><div class="ex-info"><div class="ex-name">Подтягивания в гравитроне</div><div class="ex-detail">3×12-15 · 26.06: -21×15×3</div></div><div class="ex-weight">-21 кг</div></div>
+      <div class="ex-row"><span class="exercise-num">2</span><div class="ex-info"><div class="ex-name">Тяга нижнего блока одной рукой</div><div class="ex-detail">65×12×3 · закрепить</div></div><div class="ex-weight">65 кг</div></div>
+      <div class="ex-row"><span class="exercise-num">3</span><div class="ex-info"><div class="ex-name">Тяга верхнего блока обратным хватом</div><div class="ex-detail">70×12×3 · не повышать</div></div><div class="ex-weight">70 кг</div></div>
+      <div class="ex-row"><span class="exercise-num">4</span><div class="ex-info"><div class="ex-name">Тяга в Хаммере одной рукой</div><div class="ex-detail">45×15×3 · закрепить</div></div><div class="ex-weight">45 кг</div></div>
       <p class="section-title">Задняя дельта + бицепс</p>
-      <div class="ex-row"><span class="exercise-num">5</span><div class="ex-info"><div class="ex-name">Обратная бабочка</div><div class="ex-detail">выполнена в день 4 &middot; 3×15</div></div><div class="ex-weight">22.5 кг</div></div>
+      <div class="ex-row"><span class="exercise-num">5</span><div class="ex-info"><div class="ex-name">Обратная бабочка</div><div class="ex-detail">3×15 · пропущена 26.06</div></div><div class="ex-weight">22.5 кг</div></div>
       <div class="ex-row"><span class="exercise-num">6</span><div class="ex-info"><div class="ex-name">Сгибание рук молот</div><div class="ex-detail"><strong>16×12×3</strong></div></div><div class="ex-weight">16 кг</div></div>
       <div class="ex-row"><span class="exercise-num">7</span><div class="ex-info"><div class="ex-name">Сгибание на наклонной 45°</div><div class="ex-detail"><strong>14×12×3</strong></div></div><div class="ex-weight">14 кг</div></div>
     </div>
@@ -427,24 +435,25 @@
   <div class="card open">
     <div class="card-header" onclick="toggle(this)">Пятница: Плечи + Грудь + Трицепс</div>
     <div class="card-body">
-      <div style="font-size:0.8rem;color:var(--text-muted);margin-bottom:8px">28.05: жим сидя 20×15×3 &middot; след. <strong>20×12×3</strong></div>
+      <div style="font-size:0.8rem;color:var(--text-muted);margin-bottom:8px">25.06: укороченная · след. — полный объём</div>
       <p class="section-title">Плечи</p>
-      <div class="ex-row"><span class="exercise-num">1</span><div class="ex-info"><div class="ex-name">Жим гантелей сидя</div><div class="ex-detail"><strong>20×12×3</strong> &middot; не 22 кг пока</div></div><div class="ex-weight">20 кг</div></div>
-      <div class="ex-row"><span class="exercise-num">2</span><div class="ex-info"><div class="ex-name">Подъём через стороны сидя</div><div class="ex-detail">3×15 &middot; средняя дельта</div></div><div class="ex-weight">10 кг</div></div>
+      <div class="ex-row"><span class="exercise-num">1</span><div class="ex-info"><div class="ex-name">Жим гантелей сидя</div><div class="ex-detail"><strong>20×12×3</strong> · не 22 кг</div></div><div class="ex-weight">20 кг</div></div>
+      <div class="ex-row"><span class="exercise-num">2</span><div class="ex-info"><div class="ex-name">Подъём через стороны сидя</div><div class="ex-detail">3×15</div></div><div class="ex-weight">10 кг</div></div>
       <p class="section-title">Задняя дельта + грудь + трицепс</p>
-      <div class="ex-row"><span class="exercise-num">3</span><div class="ex-info"><div class="ex-name">Вертикальная тяга штанги к груди</div><div class="ex-detail">3×15 &middot; замена тяги блока в сторону</div></div><div class="ex-weight">6 кг</div></div>
-      <div class="ex-row"><span class="exercise-num">4</span><div class="ex-info"><div class="ex-name">Сведение рук в тренажёре</div><div class="ex-detail">3×15 &middot; добивка груди</div></div><div class="ex-weight">30 кг</div></div>
-      <div class="ex-row"><span class="exercise-num">5</span><div class="ex-info"><div class="ex-name">Разгибание на блоке вниз</div><div class="ex-detail">3×15 &middot; кандидат на 25 кг</div></div><div class="ex-weight">22.5 кг</div></div>
+      <div class="ex-row"><span class="exercise-num">3</span><div class="ex-info"><div class="ex-name">Вертикальная тяга штанги к груди</div><div class="ex-detail">3×15 · 25.06: 7×15×3</div></div><div class="ex-weight">7 кг</div></div>
+      <div class="ex-row"><span class="exercise-num">4</span><div class="ex-info"><div class="ex-name">Сведение рук в тренажёре</div><div class="ex-detail">3×15 · добить 3-й подход</div></div><div class="ex-weight">30 кг</div></div>
+      <div class="ex-row"><span class="exercise-num">5</span><div class="ex-info"><div class="ex-name">Обратная бабочка</div><div class="ex-detail">3×15 · пропущена 25.06</div></div><div class="ex-weight">22.5 кг</div></div>
+      <div class="ex-row"><span class="exercise-num">6</span><div class="ex-info"><div class="ex-name">Разгибание на блоке вниз</div><div class="ex-detail">3-4×15 · пропущено 25.06</div></div><div class="ex-weight">22.5 кг</div></div>
     </div>
   </div>
 </div>
 
 <div id="food" class="panel">
   <div class="macro-row">
-    <div class="macro-box kcal"><div class="val">3100</div><div class="lbl">цель сейчас</div></div>
+    <div class="macro-box kcal"><div class="val">3000</div><div class="lbl">с 30.06</div></div>
     <div class="macro-box prot"><div class="val">170</div><div class="lbl">белок, г</div></div>
     <div class="macro-box fat"><div class="val">80</div><div class="lbl">жиры, г</div></div>
-    <div class="macro-box carb"><div class="val">390-410</div><div class="lbl">углев, г</div></div>
+    <div class="macro-box carb"><div class="val">~400</div><div class="lbl">углев, г</div></div>
   </div>
 
   <div class="card open">
@@ -456,10 +465,13 @@
         <tr><td>11.05-15.05</td><td>факт ~2800</td><td>Вес стабилен</td></tr>
         <tr><td>16.05-22.05</td><td>факт ~3000</td><td>+0.66 кг/нед</td></tr>
         <tr><td>23.05-29.05</td><td>факт ~3000</td><td>Вес 81.50, стагнация</td></tr>
-        <tr><td>30.05-05.06</td><td><strong>3100</strong> ккал</td><td>Подтверждено 30.05</td></tr>
-        <tr><td>29.06-27.07</td><td>3150-3300 ккал</td><td>Мезо 2 по динамике</td></tr>
+        <tr><td>30.05-08.06</td><td>факт <strong>3100</strong></td><td>Вес 82.10 (+0.6 кг)</td></tr>
+        <tr><td>09-22.06</td><td><strong>2700-2800</strong> ккал</td><td>Off: тату + болезнь</td></tr>
+        <tr><td>21-28.06</td><td>факт <strong>2700-2800</strong></td><td>4/4 тренировки; вес ~82.75</td></tr>
+        <tr><td>30.06+</td><td><strong>3000</strong> ккал</td><td>Подтверждено 28.06</td></tr>
+        <tr><td>07.07</td><td>→ <strong>3100</strong> при стагнации</td><td>Пересмотр по весу</td></tr>
       </table>
-      <div class="note">3100 ккал с 30.05. Пересмотр 07.06: цель вес Вт-Пт 81.7-82.2.</div>
+      <div class="note">С <strong>30.06</strong>: <strong>3000</strong> ккал (170 Б / 80 Ж / ~400 У). +200 ккал vs W26 — в основном углеводы (+50 г риса сухого/день или аналог).</div>
     </div>
   </div>
 
@@ -497,9 +509,9 @@
     <div class="card-body">
       <table>
         <tr><th>Упражнение</th><th>Старт</th><th>Цель</th></tr>
-        <tr><td>Наклонный жим в Смите</td><td>52.5 × 12/12/9</td><td><strong>52.5 × 10-12 × 3</strong> (закрепить)</td></tr>
-        <tr><td>Бабочка</td><td>30-32.5</td><td>37.5 × 3×10-12 или 35 × 3×15</td></tr>
-        <tr><td>Жим гантелей лёжа</td><td>26 × 11/10/10</td><td>26 × 2-3×10-12</td></tr>
+        <tr><td>Наклонный жим в Смите</td><td><strong>55 × 10/10/10</strong> (21.06)</td><td>Закрепить 55×10-12, не 57.5</td></tr>
+        <tr><td>Бабочка</td><td><strong>35 × 3×12</strong> (21.06)</td><td>✅ Пик</td></tr>
+        <tr><td>Жим гантелей лёжа</td><td><strong>26 × 3×12</strong> (21.06)</td><td>✅ Пик</td></tr>
         <tr><td>Жим гантелей сидя</td><td>20 × 15/14/12</td><td>22 × 3×8-10 или 20 × 3×12</td></tr>
         <tr><td>Трицепс на блоке</td><td>22.5-25 × 3×15</td><td>25 × 3×12-15</td></tr>
         <tr><td>Сгибание на наклонной</td><td>14 × 3×12 свежим</td><td>14 × 3×10-12</td></tr>
@@ -508,24 +520,24 @@
         <tr><td>Тяга верхнего блока</td><td>70 × 3×12</td><td>Закрепить, не ↑</td></tr>
         <tr><td>Разгибание ног</td><td>60 × 4×12</td><td>65 × 4×10-12</td></tr>
         <tr><td>Сгибание ног</td><td>40 × 15/15/15/12</td><td>42.5-45 × 4×12-15</td></tr>
-        <tr><td>Жим ногами</td><td>100 × 15×2</td><td>Закрепить 100×15</td></tr>
+        <tr><td>Жим ногами</td><td>пропущен 22.06</td><td><strong>90-100×12-15×2</strong> обязателен</td></tr>
       </table>
       <div class="note">Успех — не разовый PR, а выполнение цели в диапазоне повторений с чистой техникой.</div>
     </div>
   </div>
 </div>
 
-<p class="updated">Обновлено: 30 мая 2026 · weekly review W22, 3100 ккал, тату 21.06</p>
+<p class="updated">Обновлено: 28 июня 2026 · 3000 ккал с 30.06 · weekly W26</p>
 
 <script>
 const todayMap = {
-  1: "Понедельник: грудь + дельта + трицепс. Смит 52.5×10-12, гантели 26→3×12, трицепс 27.5.",
-  2: "Вторник: ноги + бицепс. 40/60/100/80; EZ 25×12×3.",
-  3: "Среда: отдых. 3100 ккал, МФР, шаги.",
-  4: "Четверг: спина + бицепс. Тяги 65/70/45 — не повышать.",
-  5: "Пятница: плечи + грудь + трицепс. Жим сидя 20×12×3.",
-  6: "Суббота: отдых. Контроль веса, шагов, аппетита и восстановления.",
-  0: "Воскресенье: отдых и подготовка weekly review."
+  1: "Пн: грудь + дельта + трицепс. Смит 55×10, бабочка 35, гантели 26. Без ↑.",
+  2: "Вт: ноги + бицепс. Жим ногами 90-100 и икры — ОБЯЗАТЕЛЬНО. 3000 ккал.",
+  3: "Ср: отдых. Белок 170 г. Шаги 8-10k. Вес утром.",
+  4: "Чт: спина + бицепс. Тяги 65/70/45 — не ↑. Обратная бабочка 22.5×15.",
+  5: "Пт: плечи + грудь + трицепс. Полный объём — не урезать. RPE 7-8.",
+  6: "Сб: отдых. Восстановление.",
+  0: "Вс: weekly check-in — вес ≥4 дня, тренировки, жим ногами да/нет."
 };
 const todayNode = document.getElementById("todayWorkout");
 if (todayNode) {

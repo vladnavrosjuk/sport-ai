@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-05-30",
+  "updatedAt": "2026-06-28",
   "sources": [
     "docs/user/measurements_log.md",
     "docs/user/recovery_log.md",
@@ -15,36 +15,41 @@
     "photoCheckFrequencyWeeks": [2, 4]
   },
   "current": {
-    "week": "2026-W22",
-    "averageWeightKg": 81.50,
-    "weeklyWeightChangeKg": -0.18,
-    "weeklyWeightChangePercent": -0.22,
-    "caloriesKcal": 3100,
+    "week": "2026-W26",
+    "averageWeightKg": 82.75,
+    "weeklyWeightChangeKg": 0.65,
+    "weeklyWeightChangePercent": 0.79,
+    "caloriesKcal": 3000,
+    "caloriesNote": "С 30.06; подтверждено 28.06",
     "waistCm": null,
-    "sleepHours": [8, 8],
-    "stress": null,
-    "stepsPerDay": 10000,
-    "backSoreness": "mild_spine_joints",
-    "alcoholSessionsPerWeek": 3
+    "sleepHours": [7, 8],
+    "stress": "medium",
+    "stepsPerDay": [8000, 10000],
+    "backSoreness": "none_reported",
+    "gymStatus": "active_return_week",
+    "workoutsCompleted": 4,
+    "workoutsPlanned": 4
   },
   "upcomingEvents": {
-    "tattooDate": "2026-06-21",
-    "gymOffPeriod": "2026-06-22/2026-06-28",
-    "mesocycle2Start": "2026-06-29",
-    "lastFullWeekBeforeTattoo": "2026-06-09/2026-06-15"
+    "tattooDate": "2026-06-09",
+    "gymOffPeriod": "2026-06-09/2026-06-20",
+    "gymReturnDate": "2026-06-21",
+    "mesocycle2Start": "2026-06-21",
+    "progressionUnlockEstimate": "2026-07-07",
+    "controlWeek": "2026-08-04/2026-08-10"
   },
   "decisionRules": [
     {
-      "condition": "weight_stable_10_14_days_and_waist_stable",
-      "recommendation": "Propose +100-150 kcal from carbohydrates."
+      "condition": "return_week_complete_4_workouts",
+      "recommendation": "Hold weights 1 more week; mandatory leg press and calves next Tuesday."
+    },
+    {
+      "condition": "weight_stable_on_3000_for_10_14_days",
+      "recommendation": "Discuss 3100 kcal from carbohydrates lever."
     },
     {
       "condition": "weight_gain_above_0_5kg_per_week_for_2_weeks_or_waist_rises_fast",
       "recommendation": "Hold calories or propose -100-150 kcal from carbohydrates."
-    },
-    {
-      "condition": "strength_down_2_sessions_or_joint_pain",
-      "recommendation": "Check sleep, stress, exercise selection, and consider deload or volume reduction."
     }
   ]
 }

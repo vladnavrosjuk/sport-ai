@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-05-30",
+  "updatedAt": "2026-06-28",
   "source": ".cursor/project/user_profile.md",
   "person": {
     "name": "Влад",
     "age": 28,
     "sex": "male",
     "heightCm": 182,
-    "weightKg": 81.50,
-    "weightNote": "Средний вес 23-29.05"
+    "weightKg": 82.75,
+    "weightNote": "Оценка 21-28.06, диапазон 82.5-83"
   },
   "training": {
     "experience": "2 года",
@@ -23,7 +23,11 @@
       "Избегать тяжёлых приседов и становой тяги",
       "Ноги в поддерживающем режиме",
       "RPE 8-9 после адаптации, отказ только в последних подходах изоляции"
-    ]
+    ],
+    "currentStatus": "mesocycle2_week2",
+    "offSince": "2026-06-09",
+    "returnDate": "2026-06-21",
+    "returnNote": "4/4 W26; прогрессия заморожена до ~07.07"
   },
   "goal": {
     "phase": "Контролируемый набор массы",
@@ -41,9 +45,12 @@
   "nutrition": {
     "restrictions": [],
     "proteinG": 170,
-    "fatG": [75, 85],
+    "fatG": [75, 80],
+    "carbsG": [380, 400],
     "baseBulkCalories": 3100,
-    "baseBulkCaloriesNote": "Подтверждено 30.05; пересмотр 07.06",
+    "currentCaloriesKcal": 3000,
+    "currentCaloriesFrom": "2026-06-30",
+    "currentCaloriesNote": "Подтверждено 28.06; пересмотр 07.07 → 3100 при стагнации",
     "maintenanceCalories": [2700, 2800]
   }
 }

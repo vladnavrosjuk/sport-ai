@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-05-30",
+  "updatedAt": "2026-06-28",
   "source": "docs/user/weight_log.md",
   "goal": {
     "targetWeightKg": [84.5, 85.0],
@@ -33,7 +33,14 @@
     { "date": "2026-05-25", "weightKg": 81.50, "caloriesKcal": 3000 },
     { "date": "2026-05-26", "weightKg": 81.40, "caloriesKcal": 3000 },
     { "date": "2026-05-27", "weightKg": 81.10, "caloriesKcal": 3000 },
-    { "date": "2026-05-28", "weightKg": 81.60, "caloriesKcal": 3000 }
+    { "date": "2026-05-28", "weightKg": 81.60, "caloriesKcal": 3000 },
+    { "date": "2026-06-01", "weightKg": 82.00, "caloriesKcal": 3100 },
+    { "date": "2026-06-02", "weightKg": 81.50, "caloriesKcal": 3100 },
+    { "date": "2026-06-04", "weightKg": 82.00, "caloriesKcal": 3100 },
+    { "date": "2026-06-05", "weightKg": 82.25, "caloriesKcal": 3100 },
+    { "date": "2026-06-07", "weightKg": 82.85, "caloriesKcal": 3100 },
+    { "date": "2026-06-08", "weightKg": 82.00, "caloriesKcal": 3100 },
+    { "date": "2026-06-28", "weightKg": 82.75, "note": "Оценка; диапазон 82.5-83; возврат в зал", "caloriesKcal": 2750 }
   ],
   "weeklyAverages": [
     {
@@ -69,12 +76,24 @@
       "averageKg": 81.50,
       "caloriesKcal": 3000,
       "trend": "-0.18 кг к W21; стагнация"
+    },
+    {
+      "period": "2026-06-02/2026-06-10",
+      "averageKg": 82.10,
+      "caloriesKcal": 3100,
+      "trend": "+0.60 кг к W22; набор на 3100"
+    },
+    {
+      "period": "2026-06-21/2026-06-28",
+      "averageKg": 82.75,
+      "caloriesKcal": 2750,
+      "trend": "+0.65 к off-базе; стабилен на 2700-2800"
     }
   ],
   "currentAssessment": {
-    "averageKg": 81.50,
-    "period": "2026-05-23/2026-05-29",
-    "status": "stalled",
-    "recommendation": "3100 ккал на неделю 30.05-05.06. Пересмотр 07.06."
+    "averageKg": 82.75,
+    "period": "2026-06-21/2026-06-28",
+    "status": "return_week_stable",
+    "recommendation": "3000 kcal from 30.06; review 07.07 for 3100 if weight stalls."
   }
 }

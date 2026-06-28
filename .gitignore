@@ -31,3 +31,6 @@ logs/
 tmp/
 temp/
 *.tmp
+
+# CLI agent local project index (regenerate: cd cli-agent && npm run build-map)
+.cli-agent-index/

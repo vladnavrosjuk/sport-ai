@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-06-28",
+  "updatedAt": "2026-09-02",
   "source": "docs/user/workout_log.md",
   "program": {
     "split": "4 дня",
@@ -162,9 +162,12 @@
     }
   ],
   "upcomingEvents": {
-    "gymReturnDate": "2026-06-21",
-    "mesocycle2Start": "2026-06-21",
-    "progressionUnlockEstimate": "2026-07-07",
-    "nextWeekPeriod": "2026-06-30/2026-07-06"
+    "stabilizationPeriod": "2026-09-02/2026-09-08",
+    "strengthReturnPeriod": "2026-09-09/2026-09-15",
+    "cutStartConditional": "2026-09-16",
+    "stabilizationVolumePercent": [70, 80],
+    "returnVolumePercent": [80, 90],
+    "returnWorkingWeightPercent": [85, 95],
+    "progressionAllowed": false
   }
 }

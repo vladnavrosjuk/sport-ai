@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-06-28",
+  "updatedAt": "2026-09-02",
   "source": ".cursor/project/user_profile.md",
   "person": {
     "name": "Влад",
     "age": 28,
     "sex": "male",
     "heightCm": 182,
-    "weightKg": 82.75,
-    "weightNote": "Оценка 21-28.06, диапазон 82.5-83"
+    "weightKg": 85.0,
+    "weightNote": "Предварительный вес 02.09 после ночного перелёта и периода алкоголя; база сушки — среднее 09-15.09"
   },
   "training": {
     "experience": "2 года",
@@ -22,19 +22,19 @@
     "constraints": [
       "Избегать тяжёлых приседов и становой тяги",
       "Ноги в поддерживающем режиме",
-      "RPE 8-9 после адаптации, отказ только в последних подходах изоляции"
+      "RPE 8-9 после адаптации, отказ только в последних подходах изоляции",
+      "Синдром Жильбера: избегать голодания и обезвоживания"
     ],
-    "currentStatus": "mesocycle2_week2",
-    "offSince": "2026-06-09",
-    "returnDate": "2026-06-21",
-    "returnNote": "4/4 W26; прогрессия заморожена до ~07.07"
+    "currentStatus": "post_vacation_stabilization",
+    "returnDate": "2026-09-02",
+    "returnNote": "Август: поддерживающие тренировки 3 раза/нед; 02-08.09 стабилизация, 09-15.09 возврат силовых"
   },
   "goal": {
-    "phase": "Контролируемый набор массы",
-    "period": "май-август 2026",
-    "targetWeightKg": [84.5, 85.0],
-    "targetRateKgPerWeek": [0.25, 0.5],
-    "context": "Lean bulk после отпуска без резкого роста талии"
+    "phase": "Возврат после отпуска → ускоренная контролируемая сушка",
+    "period": "сентябрь-декабрь 2026",
+    "targetWeightKg": 78.0,
+    "targetRateKgPerWeek": [-0.6, -0.4],
+    "context": "S0 = среднее 09-15.09; 6 недель дефицита, 1 неделя поддержки, до 6 недель дефицита"
   },
   "lifestyle": {
     "work": "Программист, сидячая работа",
@@ -45,12 +45,15 @@
   "nutrition": {
     "restrictions": [],
     "proteinG": 170,
-    "fatG": [75, 80],
-    "carbsG": [380, 400],
-    "baseBulkCalories": 3100,
-    "currentCaloriesKcal": 3000,
-    "currentCaloriesFrom": "2026-06-30",
-    "currentCaloriesNote": "Подтверждено 28.06; пересмотр 07.07 → 3100 при стагнации",
-    "maintenanceCalories": [2700, 2800]
+    "fatG": 80,
+    "carbsG": 325,
+    "cutProteinG": 175,
+    "cutFatG": 70,
+    "cutCarbsG": [215, 220],
+    "currentCaloriesKcal": 2700,
+    "currentCaloriesFrom": "2026-09-02",
+    "currentCaloriesNote": "Стабилизация до 15.09; дефицит 2200 с 16.09 при готовности",
+    "maintenanceCalories": [2600, 2700],
+    "cutCaloriesKcal": 2200
   }
 }

@@ -1,18 +1,21 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-06-28",
+  "updatedAt": "2026-09-02",
   "source": "docs/user/nutrition_plan.md",
-  "phase": "Lean bulk — неделя 2 возврата",
+  "phase": "Стабилизация после отпуска → ускоренная сушка",
   "targets": {
-    "targetWeightKg": [84.5, 85.0],
+    "targetWeightKg": 78.0,
     "proteinG": 170,
-    "fatG": [75, 80],
-    "carbsG": [380, 400],
-    "carbsStrategy": "Остаток калорий",
-    "trainingDayCaloriesKcal": 3000,
-    "restDayCaloriesKcal": 2850,
-    "baseBulkCaloriesKcal": 3000,
-    "offMaintenanceCaloriesKcal": [2700, 2800]
+    "fatG": 80,
+    "carbsG": 325,
+    "stabilizationCaloriesKcal": 2700,
+    "cutCaloriesKcal": 2200,
+    "cutProteinG": 175,
+    "cutFatG": 70,
+    "cutCarbsG": [215, 220],
+    "optionalTrainingDayCaloriesKcal": 2250,
+    "optionalRestDayCaloriesKcal": [2100, 2150],
+    "dietBreakCaloriesKcal": [2600, 2700]
   },
   "phases": [
     {
@@ -64,23 +67,52 @@
       "period": "2026-06-30/2026-07-27",
       "targetCaloriesKcal": 3000,
       "purpose": "Мезоцикл 2; пересмотр 07.07 → 3100 при стагнации"
+    },
+    {
+      "period": "2026-09-02/2026-09-15",
+      "targetCaloriesKcal": 2700,
+      "purpose": "Стабилизация после перелёта и возврат силовых; определить S0"
+    },
+    {
+      "period": "2026-09-16/2026-10-27",
+      "targetCaloriesKcal": 2200,
+      "purpose": "Дефицит 1"
+    },
+    {
+      "period": "2026-10-28/2026-11-03",
+      "targetCaloriesKcal": [2600, 2700],
+      "purpose": "Поддержка; удержание среднего веса"
+    },
+    {
+      "period": "2026-11-04/2026-12-15",
+      "targetCaloriesKcal": 2200,
+      "adjustmentRangeKcal": [2100, 2300],
+      "purpose": "Дефицит 2 до 78 кг"
+    },
+    {
+      "period": "2026-12-16/2026-12-29",
+      "targetCaloriesKcal": [2500, 2600],
+      "purpose": "Резерв завершения и закрепление 78 кг"
     }
   ],
   "latestWeek": {
-    "period": "2026-06-30/2026-07-06",
-    "targetCaloriesKcal": 3000,
+    "period": "2026-09-02/2026-09-08",
+    "targetCaloriesKcal": 2700,
     "proteinG": 170,
     "fatG": 80,
-    "carbsG": 400,
-    "weightTrend": "82.75 кг старт недели",
-    "assessment": "3000 ккал с 30.06; пересмотр 07.07"
+    "carbsG": 325,
+    "weightTrend": "85.0 кг предварительно после перелёта",
+    "assessment": "Не менять калории; ежедневный вес, без алкоголя, среднее 08.09"
   },
   "adjustmentRules": {
-    "ifNoWeightGainDays": [10, 14],
+    "evaluationWindowDays": 14,
+    "targetLossKgPerWeek": [0.4, 0.6],
     "increaseCaloriesKcal": [100, 150],
     "decreaseCaloriesKcal": [100, 150],
+    "minimumCaloriesWithoutReassessment": 2100,
     "primaryLever": "Углеводы",
     "proteinPolicy": "Держать стабильно",
-    "nextReviewDate": "2026-07-07"
+    "nextReviewDate": "2026-09-08",
+    "requiresUserApproval": true
   }
 }

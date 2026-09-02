@@ -1,55 +1,57 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-06-28",
+  "updatedAt": "2026-09-02",
   "sources": [
     "docs/user/measurements_log.md",
     "docs/user/recovery_log.md",
     "docs/user/weight_log.md"
   ],
-  "leanBulkTargets": {
-    "weightGainKgPerWeek": [0.25, 0.5],
-    "weightGainPercentPerWeek": [0.3, 0.6],
+  "cutTargets": {
+    "weightLossKgPerWeek": [0.4, 0.6],
+    "targetWeightKg": 78.0,
     "stepsPerDay": 10000,
     "sleepHours": [7, 8],
     "waistCheckFrequency": "weekly",
     "photoCheckFrequencyWeeks": [2, 4]
   },
   "current": {
-    "week": "2026-W26",
-    "averageWeightKg": 82.75,
-    "weeklyWeightChangeKg": 0.65,
-    "weeklyWeightChangePercent": 0.79,
-    "caloriesKcal": 3000,
-    "caloriesNote": "С 30.06; подтверждено 28.06",
+    "week": "2026-W36",
+    "weightKg": 85.0,
+    "weightStatus": "provisional_post_flight",
+    "averageWeightKg": null,
+    "weeklyWeightChangeKg": null,
+    "weeklyWeightChangePercent": null,
+    "caloriesKcal": 2700,
+    "caloriesNote": "Стабилизация 02-15.09; 2200 с 16.09 при готовности",
     "waistCm": null,
     "sleepHours": [7, 8],
     "stress": "medium",
     "stepsPerDay": [8000, 10000],
     "backSoreness": "none_reported",
-    "gymStatus": "active_return_week",
-    "workoutsCompleted": 4,
+    "gymStatus": "post_vacation_stabilization",
+    "workoutsCompleted": null,
     "workoutsPlanned": 4
   },
   "upcomingEvents": {
-    "tattooDate": "2026-06-09",
-    "gymOffPeriod": "2026-06-09/2026-06-20",
-    "gymReturnDate": "2026-06-21",
-    "mesocycle2Start": "2026-06-21",
-    "progressionUnlockEstimate": "2026-07-07",
-    "controlWeek": "2026-08-04/2026-08-10"
+    "stabilization": "2026-09-02/2026-09-08",
+    "strengthReturn": "2026-09-09/2026-09-15",
+    "cutBlock1": "2026-09-16/2026-10-27",
+    "dietBreak": "2026-10-28/2026-11-03",
+    "cutBlock2": "2026-11-04/2026-12-15",
+    "reserveAndExit": "2026-12-16/2026-12-29"
   },
   "decisionRules": [
     {
-      "condition": "return_week_complete_4_workouts",
-      "recommendation": "Hold weights 1 more week; mandatory leg press and calves next Tuesday."
+      "condition": "post_flight_stabilization",
+      "recommendation": "Hold 2700 kcal, normalize sleep/hydration, collect daily weights."
     },
     {
-      "condition": "weight_stable_on_3000_for_10_14_days",
-      "recommendation": "Discuss 3100 kcal from carbohydrates lever."
+      "condition": "loss_below_0_2kg_per_week_for_2_weeks",
+      "recommendation": "Propose -100 to -150 kcal; apply only after approval."
     },
     {
-      "condition": "weight_gain_above_0_5kg_per_week_for_2_weeks_or_waist_rises_fast",
-      "recommendation": "Hold calories or propose -100-150 kcal from carbohydrates."
+      "condition": "loss_above_0_7kg_per_week_for_2_weeks_or_strength_sleep_decline",
+      "recommendation": "Propose +100 to +150 kcal and consider a 20-30% volume reduction."
     }
   ]
 }

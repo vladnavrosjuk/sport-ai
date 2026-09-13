@@ -1,12 +1,15 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-02",
+  "updatedAt": "2026-09-13",
   "source": "docs/user/weight_log.md",
   "goal": {
     "targetWeightKg": 78.0,
     "targetRateKgPerWeek": [-0.6, -0.4],
     "baselinePeriod": "2026-09-09/2026-09-15",
-    "provisionalBaselineKg": 84.5
+    "provisionalBaselineKg": 84.5,
+    "actualBaselineKg": 85.4,
+    "baselineWeek": "2026-W37",
+    "baselineShiftKg": 0.9
   },
   "entries": [
     { "date": "2026-03-15", "weightKg": 80.0, "note": "Базовая линия, конец сушки" },
@@ -46,7 +49,8 @@
     { "date": "2026-07-21", "weightKg": 84.55, "caloriesKcal": 3100 },
     { "date": "2026-07-22", "weightKg": 84.25, "caloriesKcal": 3100 },
     { "date": "2026-07-24", "weightKg": 84.10, "caloriesKcal": 3100 },
-    { "date": "2026-09-02", "weightKg": 85.0, "caloriesKcal": 2700, "provisional": true, "note": "После ночного перелёта и периода частого алкоголя; не использовать как S0" }
+    { "date": "2026-09-02", "weightKg": 85.0, "caloriesKcal": 2700, "provisional": true, "note": "После ночного перелёта и периода частого алкоголя; не использовать как S0" },
+    { "date": "2026-09-12", "weightKg": 85.4, "caloriesKcal": 2700, "weeklyAverage": true, "period": "2026-09-06/2026-09-12", "note": "W37 среднее; принято как S0" }
   ],
   "weeklyAverages": [
     {
@@ -100,28 +104,36 @@
       "averageKg": 84.30,
       "caloriesKcal": 3100,
       "trend": "+0.30 кг к предыдущей неделе; цель набора достигнута"
+    },
+    {
+      "period": "2026-09-06/2026-09-12",
+      "averageKg": 85.4,
+      "caloriesKcal": 2700,
+      "macros": { "proteinG": 170, "fatG": 75, "carbsG": 340 },
+      "trend": "S0 установлен; +0.9 кг к плановому 84.5; старт дефицита 2300 с 13.09"
     }
   ],
   "currentAssessment": {
-    "weightKg": 85.0,
-    "date": "2026-09-02",
-    "status": "provisional_post_flight",
-    "recommendation": "2700 kcal through 15.09; daily weigh-ins; set S0 from 09-15.09 average."
+    "weightKg": 85.4,
+    "date": "2026-09-12",
+    "status": "baseline_set",
+    "recommendation": "2300 kcal from 13.09; daily weigh-ins; shift intermediate targets +0.9 kg; goal 78.0 unchanged."
   },
   "cutPlan": {
-    "startDate": "2026-09-16",
+    "startDate": "2026-09-13",
+    "startCaloriesKcal": 2300,
     "targetDate": "2026-12-15",
     "reserveEndDate": "2026-12-29",
     "targetWeightKg": 78.0,
     "toleranceKg": 0.3,
     "plannedWeeklyAverages": [
-      { "date": "2026-09-15", "weightKg": 84.5, "type": "baseline_provisional" },
-      { "date": "2026-09-22", "weightKg": 84.0, "type": "deficit" },
-      { "date": "2026-09-29", "weightKg": 83.4, "type": "deficit" },
-      { "date": "2026-10-06", "weightKg": 82.9, "type": "deficit" },
-      { "date": "2026-10-13", "weightKg": 82.3, "type": "deficit" },
-      { "date": "2026-10-20", "weightKg": 81.8, "type": "deficit" },
-      { "date": "2026-10-27", "weightKg": 81.2, "type": "deficit" },
+      { "date": "2026-09-12", "weightKg": 85.4, "type": "baseline_actual" },
+      { "date": "2026-09-22", "weightKg": 84.9, "type": "deficit" },
+      { "date": "2026-09-29", "weightKg": 84.3, "type": "deficit" },
+      { "date": "2026-10-06", "weightKg": 83.8, "type": "deficit" },
+      { "date": "2026-10-13", "weightKg": 83.2, "type": "deficit" },
+      { "date": "2026-10-20", "weightKg": 82.7, "type": "deficit" },
+      { "date": "2026-10-27", "weightKg": 82.1, "type": "deficit" },
       { "date": "2026-11-03", "weightKg": 81.2, "type": "maintenance" },
       { "date": "2026-11-10", "weightKg": 80.7, "type": "deficit" },
       { "date": "2026-11-17", "weightKg": 80.1, "type": "deficit" },

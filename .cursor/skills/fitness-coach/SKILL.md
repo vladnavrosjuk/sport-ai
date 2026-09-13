@@ -33,7 +33,7 @@ For any coaching, logging, generation, or adjustment task:
 - `/next-cycle`: review the completed cycle, ask for confirmation on any structure or load changes, archive the old program, create the next cycle, and update `docs/user/dashboard.html`.
 - `/deload`: choose a deload method from fatigue context, create the deload plan, and update `docs/user/dashboard.html`.
 - `/generate-full`: run workout and nutrition generation together after profile verification, then sync structured data and dashboard.
-- `/weekly-review`: if weekly data is missing, collect it interactively in blocks (period, weight, nutrition, workouts, recovery, measurements, confirmation); then produce `docs/user/weekly_reviews/YYYY-WXX.md`, summarize the week, plan the next week, sync structured data, and update dashboard.
+- `/weekly-review`: before asking for workouts manually, try **gymup-sync** skill (`~/gymup-sync/export-workouts.sh` + `format-weekly.py`); if GymUp data is confirmed, skip manual workout entry; otherwise collect interactively (period, weight, nutrition, workouts, recovery, measurements, confirmation); then produce `docs/user/weekly_reviews/YYYY-WXX.md`, summarize the week, plan the next week, sync structured data, and update dashboard.
 - `/monthly-review`: produce `docs/user/monthly_reviews/YYYY-MM.md`, summarize the month, and propose next block changes.
 - `/update-1rm`: record confirmed PRs or calculated 1RM updates, then propose working-weight changes separately.
 - `/adjust-calories`: analyze weight trend and nutrition adherence, then propose calorie or macro changes for confirmation.

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-02",
+  "updatedAt": "2026-09-13",
   "source": "docs/user/nutrition_plan.md",
   "phase": "Стабилизация после отпуска → ускоренная сушка",
   "targets": {
@@ -96,13 +96,22 @@
     }
   ],
   "latestWeek": {
-    "period": "2026-09-02/2026-09-08",
+    "period": "2026-09-06/2026-09-12",
     "targetCaloriesKcal": 2700,
+    "actualCaloriesKcal": 2700,
     "proteinG": 170,
-    "fatG": 80,
-    "carbsG": 325,
-    "weightTrend": "85.0 кг предварительно после перелёта",
-    "assessment": "Не менять калории; ежедневный вес, без алкоголя, среднее 08.09"
+    "fatG": 75,
+    "carbsG": 340,
+    "averageWeightKg": 85.4,
+    "assessment": "S0=85.4; мягкий дефицит 2300 с 13.09 подтверждён"
+  },
+  "currentWeek": {
+    "period": "2026-09-13/2026-09-19",
+    "targetCaloriesKcal": 2300,
+    "proteinG": 170,
+    "fatG": 70,
+    "carbsG": 245,
+    "restDayCaloriesKcal": [2200, 2250]
   },
   "adjustmentRules": {
     "evaluationWindowDays": 14,
@@ -112,7 +121,7 @@
     "minimumCaloriesWithoutReassessment": 2100,
     "primaryLever": "Углеводы",
     "proteinPolicy": "Держать стабильно",
-    "nextReviewDate": "2026-09-08",
+    "nextReviewDate": "2026-09-20",
     "requiresUserApproval": true
   }
 }

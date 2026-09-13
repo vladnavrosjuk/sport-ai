@@ -19,6 +19,7 @@
 - `docs/user/measurements_log.md`
 - `docs/user/recovery_log.md`
 - `docs/user/data/*.json` если доступны
+- **GymUp (ADB):** `~/gymup-sync/export-workouts.sh` — см. skill `gymup-sync`
 
 ## Процесс
 
@@ -70,7 +71,20 @@
 
 ### Шаг 4 — Тренировки
 
-Спросить:
+**Сначала — автоматический сбор из GymUp** (skill `gymup-sync`):
+
+```bash
+~/gymup-sync/export-workouts.sh 7
+python3 .cursor/skills/gymup-sync/scripts/format-weekly.py
+```
+
+Если экспорт успешен (`trainings > 0`):
+
+1. Показать сформированный markdown пользователю
+2. Спросить: «Тренировки из GymUp верные? Добавить RPE/самочувствие?»
+3. При подтверждении — **не** запрашивать веса/повторы вручную
+
+Если ADB/GymUp недоступен — спросить вручную:
 
 ```text
 Пришли тренировки за неделю по дням: упражнения, вес, повторы, подходы и RPE/ощущения, если есть.

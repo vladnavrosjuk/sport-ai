@@ -1,10 +1,11 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-02",
+  "updatedAt": "2026-09-13",
   "sources": [
     "docs/user/measurements_log.md",
     "docs/user/recovery_log.md",
-    "docs/user/weight_log.md"
+    "docs/user/weight_log.md",
+    "docs/user/weekly_reviews/2026-W37.md"
   ],
   "cutTargets": {
     "weightLossKgPerWeek": [0.4, 0.6],
@@ -15,43 +16,47 @@
     "photoCheckFrequencyWeeks": [2, 4]
   },
   "current": {
-    "week": "2026-W36",
-    "weightKg": 85.0,
-    "weightStatus": "provisional_post_flight",
-    "averageWeightKg": null,
+    "week": "2026-W38",
+    "weightKg": 85.4,
+    "weightStatus": "baseline_set",
+    "averageWeightKg": 85.4,
+    "baselineKg": 85.4,
+    "baselineShiftKg": 0.9,
     "weeklyWeightChangeKg": null,
     "weeklyWeightChangePercent": null,
-    "caloriesKcal": 2700,
-    "caloriesNote": "Стабилизация 02-15.09; 2200 с 16.09 при готовности",
+    "caloriesKcal": 2300,
+    "caloriesNote": "Мягкий старт дефицита с 13.09; пересмотр 20.09",
+    "macros": { "proteinG": 170, "fatG": 70, "carbsG": 245 },
     "waistCm": null,
-    "sleepHours": [7, 8],
-    "stress": "medium",
-    "stepsPerDay": [8000, 10000],
-    "backSoreness": "none_reported",
-    "gymStatus": "post_vacation_stabilization",
-    "workoutsCompleted": null,
-    "workoutsPlanned": 4
+    "sleepHours": 8,
+    "stress": "low",
+    "stepsPerDay": 10000,
+    "backSoreness": "mild_after_back_day",
+    "gymStatus": "soft_deficit_start",
+    "workoutsCompleted": 4,
+    "workoutsPlanned": 4,
+    "lastWeekPeriod": "2026-09-06/2026-09-12"
   },
   "upcomingEvents": {
-    "stabilization": "2026-09-02/2026-09-08",
-    "strengthReturn": "2026-09-09/2026-09-15",
-    "cutBlock1": "2026-09-16/2026-10-27",
+    "softDeficit": "2026-09-13/2026-09-19",
+    "waistCheck": "2026-09-15",
+    "cutBlock1": "2026-09-13/2026-10-27",
     "dietBreak": "2026-10-28/2026-11-03",
     "cutBlock2": "2026-11-04/2026-12-15",
     "reserveAndExit": "2026-12-16/2026-12-29"
   },
   "decisionRules": [
     {
-      "condition": "post_flight_stabilization",
-      "recommendation": "Hold 2700 kcal, normalize sleep/hydration, collect daily weights."
-    },
-    {
       "condition": "loss_below_0_2kg_per_week_for_2_weeks",
-      "recommendation": "Propose -100 to -150 kcal; apply only after approval."
+      "recommendation": "Propose -100 kcal from 2300; apply only after approval."
     },
     {
       "condition": "loss_above_0_7kg_per_week_for_2_weeks_or_strength_sleep_decline",
-      "recommendation": "Propose +100 to +150 kcal and consider a 20-30% volume reduction."
+      "recommendation": "Propose +100 kcal and consider a 20-30% volume reduction."
+    },
+    {
+      "condition": "back_pain_after_pull_day",
+      "recommendation": "MFR 5-10 min; do not increase pull weights; leave 2-3 reps in reserve."
     }
   ]
 }

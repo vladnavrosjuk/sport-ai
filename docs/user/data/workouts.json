@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-02",
+  "updatedAt": "2026-09-13",
   "source": "docs/user/workout_log.md",
   "program": {
     "split": "4 дня",
@@ -131,6 +131,23 @@
         "Тяги 65/70/45 на пике — не повышать",
         "Прогрессия заморожена до ~07.07"
       ]
+    },
+    {
+      "period": "2026-09-06/2026-09-12",
+      "workoutsCompleted": 4,
+      "workoutsPlanned": 4,
+      "scheduleNote": "Факт: Вс 06 / Пн 07 / Ср 09 / Чт 10",
+      "tonnageT": 27.21,
+      "averageWeightKg": 85.4,
+      "averageCaloriesKcal": 2700,
+      "macros": { "proteinG": 170, "fatG": 75, "carbsG": 340 },
+      "mainSkip": "Жим ногами и икры 07.09 (время); обр. бабочка на дне спины",
+      "observations": [
+        "Смит 57.5 в отказ — держать RPE 7-8",
+        "Бабочка 37, гантели 26 — пик",
+        "Лёгкая боль в спине после 09.09",
+        "С 13.09 дефицит 2300 ккал"
+      ]
     }
   ],
   "latestKeySets": [
@@ -141,7 +158,12 @@
     { "date": "2026-06-22", "exercise": "Разгибание ног", "result": "60 кг × 4×15" },
     { "date": "2026-06-26", "exercise": "Тяга верхнего блока", "result": "70 кг × 3×12" },
     { "date": "2026-06-26", "exercise": "Подтягивания гравитрон", "result": "-21 кг × 3×15" },
-    { "date": "2026-06-26", "exercise": "Тяга Хаммера", "result": "45 кг × 3×15" }
+    { "date": "2026-06-26", "exercise": "Тяга Хаммера", "result": "45 кг × 3×15" },
+    { "date": "2026-09-06", "exercise": "Наклонный Смит", "result": "57.5 кг × 12/11/9 (отказ)" },
+    { "date": "2026-09-06", "exercise": "Бабочка", "result": "37 кг × 3×12" },
+    { "date": "2026-09-06", "exercise": "Жим гантелей лёжа", "result": "26 кг × 3×12" },
+    { "date": "2026-09-09", "exercise": "Подтягивания гравитрон", "result": "-21 кг × 3×15" },
+    { "date": "2026-09-09", "exercise": "Тяга верхнего блока", "result": "70 кг × 10/10/12" }
   ],
   "recurringIssues": [
     {
@@ -162,12 +184,11 @@
     }
   ],
   "upcomingEvents": {
-    "stabilizationPeriod": "2026-09-02/2026-09-08",
-    "strengthReturnPeriod": "2026-09-09/2026-09-15",
-    "cutStartConditional": "2026-09-16",
-    "stabilizationVolumePercent": [70, 80],
-    "returnVolumePercent": [80, 90],
-    "returnWorkingWeightPercent": [85, 95],
+    "softDeficitStart": "2026-09-13",
+    "cutCaloriesKcal": 2300,
+    "volumePercent": [85, 90],
+    "workingWeightPolicy": "hold_no_progression",
+    "mandatoryExercises": ["Жим ногами", "Икры", "Обратная бабочка на дне спины"],
     "progressionAllowed": false
   }
 }

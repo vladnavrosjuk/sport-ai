@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-13",
+  "updatedAt": "2026-09-19",
   "source": "docs/user/workout_log.md",
   "program": {
     "split": "4 дня",
@@ -148,6 +148,23 @@
         "Лёгкая боль в спине после 09.09",
         "С 13.09 дефицит 2300 ккал"
       ]
+    },
+    {
+      "period": "2026-09-13/2026-09-19",
+      "workoutsCompleted": 4,
+      "workoutsPlanned": 4,
+      "scheduleNote": "Факт: Вс 13 / Пн 14 / Ср 16 / Чт 17",
+      "tonnageT": 34.09,
+      "averageWeightKg": 84.9,
+      "averageCaloriesKcal": 2300,
+      "macros": { "proteinG": 170, "fatG": 70, "carbsG": 245 },
+      "mainSkip": "Сгибание ног лёжа; обр. бабочка на дне спины (сделана в Пт)",
+      "observations": [
+        "Жим ногами 100×15 вернулся",
+        "Икры 100×15×3",
+        "Вялость перед тренировками на дефиците",
+        "Держать 2300 ккал — темп −0.5 кг/нед"
+      ]
     }
   ],
   "latestKeySets": [
@@ -163,7 +180,10 @@
     { "date": "2026-09-06", "exercise": "Бабочка", "result": "37 кг × 3×12" },
     { "date": "2026-09-06", "exercise": "Жим гантелей лёжа", "result": "26 кг × 3×12" },
     { "date": "2026-09-09", "exercise": "Подтягивания гравитрон", "result": "-21 кг × 3×15" },
-    { "date": "2026-09-09", "exercise": "Тяга верхнего блока", "result": "70 кг × 10/10/12" }
+    { "date": "2026-09-09", "exercise": "Тяга верхнего блока", "result": "70 кг × 10/10/12" },
+    { "date": "2026-09-14", "exercise": "Жим ногами", "result": "100 кг × 15/15, 80×20" },
+    { "date": "2026-09-14", "exercise": "Подъём на носки", "result": "100 кг × 3×15" },
+    { "date": "2026-09-13", "exercise": "Наклонный Смит", "result": "57.5 кг × 12/12/10" }
   ],
   "recurringIssues": [
     {
@@ -184,11 +204,12 @@
     }
   ],
   "upcomingEvents": {
-    "softDeficitStart": "2026-09-13",
+    "deficitWeek": "2026-W39",
     "cutCaloriesKcal": 2300,
+    "calorieReviewDate": "2026-09-27",
     "volumePercent": [85, 90],
     "workingWeightPolicy": "hold_no_progression",
-    "mandatoryExercises": ["Жим ногами", "Икры", "Обратная бабочка на дне спины"],
+    "mandatoryExercises": ["Сгибание ног лёжа", "Обратная бабочка на дне спины"],
     "progressionAllowed": false
   }
 }

@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-13",
+  "updatedAt": "2026-09-19",
   "sources": [
     "docs/user/measurements_log.md",
     "docs/user/recovery_log.md",
     "docs/user/weight_log.md",
-    "docs/user/weekly_reviews/2026-W37.md"
+    "docs/user/weekly_reviews/2026-W38.md"
   ],
   "cutTargets": {
     "weightLossKgPerWeek": [0.4, 0.6],
@@ -16,30 +16,31 @@
     "photoCheckFrequencyWeeks": [2, 4]
   },
   "current": {
-    "week": "2026-W38",
-    "weightKg": 85.4,
-    "weightStatus": "baseline_set",
-    "averageWeightKg": 85.4,
+    "week": "2026-W39",
+    "weightKg": 84.9,
+    "weightStatus": "deficit_on_track",
+    "averageWeightKg": 84.9,
     "baselineKg": 85.4,
     "baselineShiftKg": 0.9,
-    "weeklyWeightChangeKg": null,
-    "weeklyWeightChangePercent": null,
+    "weeklyWeightChangeKg": -0.5,
+    "weeklyWeightChangePercent": -0.59,
     "caloriesKcal": 2300,
-    "caloriesNote": "Мягкий старт дефицита с 13.09; пересмотр 20.09",
+    "caloriesNote": "Держать 2300; пересмотр 27.09 по среднему и самочувствию",
     "macros": { "proteinG": 170, "fatG": 70, "carbsG": 245 },
     "waistCm": null,
     "sleepHours": 8,
     "stress": "low",
     "stepsPerDay": 10000,
-    "backSoreness": "mild_after_back_day",
-    "gymStatus": "soft_deficit_start",
+    "backSoreness": "none",
+    "fatigue": "mild_pre_workout",
+    "gymStatus": "deficit_week_2",
     "workoutsCompleted": 4,
     "workoutsPlanned": 4,
-    "lastWeekPeriod": "2026-09-06/2026-09-12"
+    "lastWeekPeriod": "2026-09-13/2026-09-19"
   },
   "upcomingEvents": {
     "softDeficit": "2026-09-13/2026-09-19",
-    "waistCheck": "2026-09-15",
+    "waistCheck": "2026-09-22",
     "cutBlock1": "2026-09-13/2026-10-27",
     "dietBreak": "2026-10-28/2026-11-03",
     "cutBlock2": "2026-11-04/2026-12-15",

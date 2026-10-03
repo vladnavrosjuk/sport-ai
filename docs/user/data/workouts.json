@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-19",
+  "updatedAt": "2026-10-03",
   "source": "docs/user/workout_log.md",
   "program": {
     "split": "4 дня",
@@ -165,6 +165,36 @@
         "Вялость перед тренировками на дефиците",
         "Держать 2300 ккал — темп −0.5 кг/нед"
       ]
+    },
+    {
+      "period": "2026-09-20/2026-09-26",
+      "workoutsCompleted": 3,
+      "workoutsPlanned": 4,
+      "scheduleNote": "Факт: Пн 21 / Ср 23 / Чт 24",
+      "tonnageT": 29.97,
+      "averageWeightKg": 84.8,
+      "averageCaloriesKcal": 2500,
+      "mainSkip": "Пятница; спина 24.09 укорочена; обр. бабочка на дне спины",
+      "observations": [
+        "Сгибание ног 40×15×3",
+        "Смит 60 кг на 23.09",
+        "Вес стагнация ~84.8"
+      ]
+    },
+    {
+      "period": "2026-09-27/2026-10-03",
+      "workoutsCompleted": 3,
+      "workoutsPlanned": 4,
+      "scheduleNote": "Факт: Пн 28 / Вт 29 / Чт 01.10",
+      "tonnageT": 19.12,
+      "averageWeightKg": 84.8,
+      "averageCaloriesKcal": 2500,
+      "mainSkip": "Пятница; 2 укороченные спины; махи 5×15",
+      "observations": [
+        "Подтягивания −21×15×3",
+        "Полная грудь 01.10",
+        "Плато веса; визуально суше"
+      ]
     }
   ],
   "latestKeySets": [
@@ -183,7 +213,10 @@
     { "date": "2026-09-09", "exercise": "Тяга верхнего блока", "result": "70 кг × 10/10/12" },
     { "date": "2026-09-14", "exercise": "Жим ногами", "result": "100 кг × 15/15, 80×20" },
     { "date": "2026-09-14", "exercise": "Подъём на носки", "result": "100 кг × 3×15" },
-    { "date": "2026-09-13", "exercise": "Наклонный Смит", "result": "57.5 кг × 12/12/10" }
+    { "date": "2026-09-13", "exercise": "Наклонный Смит", "result": "57.5 кг × 12/12/10" },
+    { "date": "2026-09-21", "exercise": "Сгибание ног лёжа", "result": "40 кг × 15/15/15" },
+    { "date": "2026-09-29", "exercise": "Подтягивания гравитрон", "result": "-21 кг × 15×3" },
+    { "date": "2026-10-01", "exercise": "Наклонный Смит", "result": "57.5 кг × 12/11/10" }
   ],
   "recurringIssues": [
     {
@@ -204,9 +237,9 @@
     }
   ],
   "upcomingEvents": {
-    "deficitWeek": "2026-W39",
+    "deficitWeek": "2026-W41",
     "cutCaloriesKcal": 2300,
-    "calorieReviewDate": "2026-09-27",
+    "calorieReviewDate": "2026-10-17",
     "volumePercent": [85, 90],
     "workingWeightPolicy": "hold_no_progression",
     "mandatoryExercises": ["Сгибание ног лёжа", "Обратная бабочка на дне спины"],

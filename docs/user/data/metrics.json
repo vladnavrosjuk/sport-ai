@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-19",
+  "updatedAt": "2026-10-03",
   "sources": [
     "docs/user/measurements_log.md",
     "docs/user/recovery_log.md",
     "docs/user/weight_log.md",
-    "docs/user/weekly_reviews/2026-W38.md"
+    "docs/user/weekly_reviews/2026-W40.md"
   ],
   "cutTargets": {
     "weightLossKgPerWeek": [0.4, 0.6],
@@ -16,31 +16,32 @@
     "photoCheckFrequencyWeeks": [2, 4]
   },
   "current": {
-    "week": "2026-W39",
-    "weightKg": 84.9,
-    "weightStatus": "deficit_on_track",
-    "averageWeightKg": 84.9,
+    "week": "2026-W41",
+    "weightKg": 84.8,
+    "weightStatus": "deficit_plateau_likely_normal",
+    "averageWeightKg": 84.8,
     "baselineKg": 85.4,
     "baselineShiftKg": 0.9,
-    "weeklyWeightChangeKg": -0.5,
-    "weeklyWeightChangePercent": -0.59,
+    "weeklyWeightChangeKg": 0.0,
+    "weeklyWeightChangePercent": 0.0,
     "caloriesKcal": 2300,
-    "caloriesNote": "Держать 2300; пересмотр 27.09 по среднему и самочувствию",
+    "caloriesNote": "Будни 2300; выходные ~2600-2700 цель (алкоголь OK); пересмотр 17.10",
     "macros": { "proteinG": 170, "fatG": 70, "carbsG": 245 },
     "waistCm": null,
-    "sleepHours": 8,
-    "stress": "low",
+    "sleepHours": 7.5,
+    "stress": "medium",
     "stepsPerDay": 10000,
     "backSoreness": "none",
     "fatigue": "mild_pre_workout",
-    "gymStatus": "deficit_week_2",
-    "workoutsCompleted": 4,
+    "gymStatus": "deficit_week_4_plateau",
+    "workoutsCompleted": 3,
     "workoutsPlanned": 4,
-    "lastWeekPeriod": "2026-09-13/2026-09-19"
+    "lastWeekPeriod": "2026-09-27/2026-10-03"
   },
   "upcomingEvents": {
-    "softDeficit": "2026-09-13/2026-09-19",
-    "waistCheck": "2026-09-22",
+    "softDeficit": "2026-09-13/2026-10-27",
+    "waistCheck": "2026-10-10",
+    "calorieReview": "2026-10-17",
     "cutBlock1": "2026-09-13/2026-10-27",
     "dietBreak": "2026-10-28/2026-11-03",
     "cutBlock2": "2026-11-04/2026-12-15",
@@ -58,6 +59,10 @@
     {
       "condition": "back_pain_after_pull_day",
       "recommendation": "MFR 5-10 min; do not increase pull weights; leave 2-3 reps in reserve."
+    },
+    {
+      "condition": "scale_flat_but_leaner_look_and_strength_held",
+      "recommendation": "Plateau may be normal (recomp, weekend calories, water); use 7-day average and optional waist before cutting calories."
     }
   ]
 }

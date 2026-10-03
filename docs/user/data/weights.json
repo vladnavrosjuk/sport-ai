@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-19",
+  "updatedAt": "2026-10-03",
   "source": "docs/user/weight_log.md",
   "goal": {
     "targetWeightKg": 78.0,
@@ -51,7 +51,9 @@
     { "date": "2026-07-24", "weightKg": 84.10, "caloriesKcal": 3100 },
     { "date": "2026-09-02", "weightKg": 85.0, "caloriesKcal": 2700, "provisional": true, "note": "После ночного перелёта и периода частого алкоголя; не использовать как S0" },
     { "date": "2026-09-12", "weightKg": 85.4, "caloriesKcal": 2700, "weeklyAverage": true, "period": "2026-09-06/2026-09-12", "note": "W37 среднее; принято как S0" },
-    { "date": "2026-09-19", "weightKg": 84.9, "caloriesKcal": 2300, "weeklyAverage": true, "period": "2026-09-13/2026-09-19", "note": "W38 среднее; −0.5 кг к W37" }
+    { "date": "2026-09-19", "weightKg": 84.9, "caloriesKcal": 2300, "weeklyAverage": true, "period": "2026-09-13/2026-09-19", "note": "W38 среднее; −0.5 кг к W37" },
+    { "date": "2026-09-26", "weightKg": 84.8, "caloriesKcal": 2300, "weeklyAverage": true, "period": "2026-09-20/2026-09-26", "note": "W39 оценка; стагнация" },
+    { "date": "2026-10-03", "weightKg": 84.8, "caloriesKcal": 2300, "weeklyAverage": true, "period": "2026-09-27/2026-10-03", "note": "W40 оценка; плато 2 нед; выходные ~3000+алкоголь" }
   ],
   "weeklyAverages": [
     {
@@ -119,13 +121,26 @@
       "caloriesKcal": 2300,
       "macros": { "proteinG": 170, "fatG": 70, "carbsG": 245 },
       "trend": "−0.5 кг к W37; темп в коридоре 0.4-0.6 кг/нед; держать 2300"
+    },
+    {
+      "period": "2026-09-20/2026-09-26",
+      "averageKg": 84.8,
+      "caloriesKcal": 2500,
+      "note": "Budni 2300; weekends to ~3000 + alcohol; estimated weekly average",
+      "trend": "Plateau vs W38; may be normal (water/recomp)"
+    },
+    {
+      "period": "2026-09-27/2026-10-03",
+      "averageKg": 84.8,
+      "caloriesKcal": 2500,
+      "trend": "Second week plateau; hold 2300 weekdays; review 2026-10-17"
     }
   ],
   "currentAssessment": {
-    "weightKg": 84.9,
-    "date": "2026-09-19",
-    "status": "deficit_on_track",
-    "recommendation": "Hold 2300 kcal; weekly change −0.5 kg in target range; daily weigh-ins; waist check W39; monitor fatigue."
+    "weightKg": 84.8,
+    "date": "2026-10-03",
+    "status": "deficit_plateau_likely_normal",
+    "recommendation": "Hold 2300 kcal weekdays; weekends target ~2600-2700 with alcohol OK; 4/4 training; daily weigh-ins 7 days; waist optional; if <0.2 kg/week for 2 more 7-day averages discuss 2200 — user approval required."
   },
   "cutPlan": {
     "startDate": "2026-09-13",

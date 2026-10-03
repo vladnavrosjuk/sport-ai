@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-13",
+  "updatedAt": "2026-10-03",
   "source": "docs/user/nutrition_plan.md",
   "phase": "Стабилизация после отпуска → ускоренная сушка",
   "targets": {
@@ -121,7 +121,7 @@
     "minimumCaloriesWithoutReassessment": 2100,
     "primaryLever": "Углеводы",
     "proteinPolicy": "Держать стабильно",
-    "nextReviewDate": "2026-09-20",
+    "nextReviewDate": "2026-10-17",
     "requiresUserApproval": true
   }
 }

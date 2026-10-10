@@ -94,6 +94,7 @@ Markdown-блок по дням:
 | Путь | Назначение |
 |------|------------|
 | `~/gymup-sync/export-workouts.sh` | Экспорт JSON/CSV/summary |
+| `.cursor/skills/gymup-sync/scripts/export-workouts.py` | Каноническая копия экспортёра (восстановить в `~/gymup-sync/scripts/` при поломке) |
 | `~/gymup-sync/server.py` | HTTP-триггер с телефона |
 | `~/gymup-sync/output/` | Экспорты `workouts-lastNd-*.json` |
 | `~/gymup-sync/catalog/` | Кэш каталога упражнений `exercises-ru-*.json` |

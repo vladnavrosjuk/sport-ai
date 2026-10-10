@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-03",
+  "updatedAt": "2026-10-09",
   "source": "docs/user/workout_log.md",
   "program": {
     "split": "4 дня",
-    "days": ["Пн", "Вт", "Чт", "Пт"],
+    "days": ["Вс", "Пн", "Ср", "Чт"],
     "priorityMuscles": ["Грудь", "Бицепс", "Трицепс"]
   },
   "weeklySummaries": [

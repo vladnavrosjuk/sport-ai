@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-03",
+  "updatedAt": "2026-10-10",
   "source": "docs/user/nutrition_plan.md",
   "phase": "Стабилизация после отпуска → ускоренная сушка",
   "targets": {
@@ -106,12 +106,12 @@
     "assessment": "S0=85.4; мягкий дефицит 2300 с 13.09 подтверждён"
   },
   "currentWeek": {
-    "period": "2026-09-13/2026-09-19",
-    "targetCaloriesKcal": 2300,
+    "period": "2026-10-11/2026-10-17",
+    "targetCaloriesKcal": 2100,
     "proteinG": 170,
     "fatG": 70,
-    "carbsG": 245,
-    "restDayCaloriesKcal": [2200, 2250]
+    "carbsG": 195,
+    "note": "W42 trial after W41 plateau; revert to 2200 if strength or sleep drops"
   },
   "adjustmentRules": {
     "evaluationWindowDays": 14,
